@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var authorAvatarImageView: UIImageView!
-    @IBOutlet weak var loginNameLabel: UILabel!
-    @IBOutlet weak var timeStampLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
     
+    static let cellReuseIdentifier = "authorInfo"
+
+    @IBOutlet weak var authorAvatarImageView = UIImageView()
+    @IBOutlet weak var loginNameLabel = UILabel()
+    @IBOutlet weak var timeStampLabel = UILabel()
+    @IBOutlet weak var messageLabel = UILabel()
 }
