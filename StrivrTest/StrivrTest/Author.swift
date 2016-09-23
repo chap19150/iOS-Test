@@ -11,11 +11,11 @@ import Foundation
 class Author {
     
     static let authorStore = Author()
-    static var loginName = ""
-    static var avatar = ""
-    static var timeStamp = ""
-    static var commitMessage = ""
-    static var commitHTMLURL = ""
+    static var loginName = [String]()
+    static var avatar = [String]()
+    static var timeStamp = [String]()
+    static var commitMessage = [String]()
+    static var commitHTMLURL = [String]()
     
     class func getCommitsForRepoByAuthor(completion: @escaping ([NSDictionary]?, Error?) -> ()) {
         
@@ -37,13 +37,13 @@ class Author {
                             fatalError("There was an issue unwrapping the author information in the Author Class.")
                     }
                     
-                    self.loginName = loginNameData
-                    self.avatar = avatarURL
-                    self.timeStamp = dateTime
-                    self.commitMessage = message
-                    self.commitHTMLURL = htmlURL
+                    self.loginName.append(loginNameData)
+                    self.avatar.append(avatarURL)
+                    self.timeStamp.append(dateTime)
+                    self.commitMessage.append(message)
+                    self.commitHTMLURL.append(htmlURL)
                     
-                    print("Login name: \(self.loginName) \nAvatar URL: \(self.avatar) \nTimeStamp: \n\(self.timeStamp) \nMessage: \(self.commitMessage) \nHTMLURL: \(self.commitHTMLURL)")
+                  //  print("Login name: \(self.loginName) \nAvatar URL: \(self.avatar) \nTimeStamp: \n\(self.timeStamp) \nMessage: \(self.commitMessage) \nHTMLURL: \(self.commitHTMLURL)")
                     
                     completion(authorsWithCommits, nil)
                 }
