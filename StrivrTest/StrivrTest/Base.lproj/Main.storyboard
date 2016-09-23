@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="198" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vYH-Xe-JZ2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="198" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vYH-Xe-JZ2">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="authorInfo" rowHeight="198" id="9Ly-Ov-Bkj" customClass="CustomTableViewCell" customModule="StrivrTest" customModuleProvider="target">
@@ -87,6 +87,7 @@
                                             <outlet property="loginNameLabel" destination="MX2-PM-MtI" id="cdm-Q5-lOW"/>
                                             <outlet property="messageLabel" destination="WCl-5E-Vgx" id="jif-yX-MM3"/>
                                             <outlet property="timeStampLabel" destination="jRz-Xp-I3e" id="VwG-fN-gSE"/>
+                                            <segue destination="K7s-eO-EWi" kind="show" identifier="webView" id="Ev5-AW-PsC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -108,6 +109,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="109.29535232383809"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="lsL-SR-g9z">
+            <objects>
+                <viewController id="K7s-eO-EWi" customClass="WebViewController" customModule="StrivrTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OE6-Jd-Wbr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ota-qV-Dd3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GQb-Iz-W7A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msV-6E-VIX">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="msV-6E-VIX" firstAttribute="centerX" secondItem="GQb-Iz-W7A" secondAttribute="centerX" id="6hW-52-o6G"/>
+                            <constraint firstItem="msV-6E-VIX" firstAttribute="width" secondItem="GQb-Iz-W7A" secondAttribute="width" id="ARy-5F-jF1"/>
+                            <constraint firstItem="msV-6E-VIX" firstAttribute="height" secondItem="GQb-Iz-W7A" secondAttribute="height" id="jad-kp-Dnv"/>
+                            <constraint firstItem="msV-6E-VIX" firstAttribute="centerY" secondItem="GQb-Iz-W7A" secondAttribute="centerY" id="xhC-Ie-XYK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commitWebView" destination="msV-6E-VIX" id="hFe-Uw-8p8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7Q-fc-69X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="109"/>
         </scene>
     </scenes>
 </document>

@@ -12,7 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var authorTableView: UITableView!
     let customTableViewCell = CustomTableViewCell()
-    //   let authorData = Author.authorStore
+    let authorData = AuthorDataStore.authorStore
+    var selectedAuthorCommitURL: URL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.authorTableView.delegate = self
         self.authorTableView.dataSource = self
         
-        Author.getCommitsForRepoByAuthor { (authorDict, error) in
+        self.authorData.getCommitsForRepoByAuthor { (authorDict, error) in
             
             if authorDict != nil {
                 
-                print("This is the count of login names: \(Author.loginName.count)")
+                print("This is the count of login names: \(self.authorData.loginName.count)")
                 self.authorTableView.reloadData()
                 
             } else if let error = error {
@@ -41,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return Author.loginName.count
+        return self.authorData.loginName.count
     }
     
     
@@ -57,8 +58,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellReuseIdentifier , for: indexPath as IndexPath) as! CustomTableViewCell
-    
-        if let imageURL = URL(string: Author.avatar[indexPath.row]) {
+        
+        if let imageURL = URL(string: self.authorData.avatar[indexPath.row]) {
             
             do {
                 let imageData = try Data(contentsOf: imageURL)
@@ -68,11 +69,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
         
-        cell.loginNameLabel?.text = "Username: \(Author.loginName[indexPath.row])"
-        cell.timeStampLabel?.text = "Time: \(Author.timeStamp[indexPath.row])"
+        cell.loginNameLabel?.text = "Username: \(self.authorData.loginName[indexPath.row])"
+        cell.timeStampLabel?.text = "Time: \(self.authorData.timeStamp[indexPath.row])"
         cell.timeStampLabel?.numberOfLines = 2
-        cell.messageLabel?.text = "Message: \(Author.commitMessage[indexPath.row])"
-        
+        cell.messageLabel?.text = "Message: \(self.authorData.commitMessage[indexPath.row])"
         
         return cell
     }
@@ -80,7 +80,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //   let webView = UIWebView()
+        
+        let url = URL(string: self.authorData.commitHTMLURL[indexPath.row])
+        self.selectedAuthorCommitURL = url
+
+        self.present(WebViewController(), animated: true, completion: nil)
+        
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        
+        
+    }
 }

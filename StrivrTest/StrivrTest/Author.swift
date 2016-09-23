@@ -8,16 +8,16 @@
 
 import Foundation
 
-class Author {
+class AuthorDataStore {
     
-    static let authorStore = Author()
-    static var loginName = [String]()
-    static var avatar = [String]()
-    static var timeStamp = [String]()
-    static var commitMessage = [String]()
-    static var commitHTMLURL = [String]()
+    static let authorStore = AuthorDataStore()
+    var loginName = [String]()
+    var avatar = [String]()
+    var timeStamp = [String]()
+    var commitMessage = [String]()
+    var commitHTMLURL = [String]()
     
-    class func getCommitsForRepoByAuthor(completion: @escaping ([NSDictionary]?, Error?) -> ()) {
+    func getCommitsForRepoByAuthor(completion: @escaping ([NSDictionary]?, Error?) -> ()) {
         
         GitHubAPIClient.getCommitsForRepoByAuthor { (authorsWithCommits, error) in
             
@@ -43,7 +43,7 @@ class Author {
                     self.commitMessage.append(message)
                     self.commitHTMLURL.append(htmlURL)
                     
-                  //  print("Login name: \(self.loginName) \nAvatar URL: \(self.avatar) \nTimeStamp: \n\(self.timeStamp) \nMessage: \(self.commitMessage) \nHTMLURL: \(self.commitHTMLURL)")
+                    //  print("Login name: \(self.loginName) \nAvatar URL: \(self.avatar) \nTimeStamp: \n\(self.timeStamp) \nMessage: \(self.commitMessage) \nHTMLURL: \(self.commitHTMLURL)")
                     
                     completion(authorsWithCommits, nil)
                 }

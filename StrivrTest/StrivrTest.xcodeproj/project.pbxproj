@@ -15,6 +15,7 @@
 		6E84E8751D9472150002E445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E84E8741D9472150002E445 /* Assets.xcassets */; };
 		6E84E8781D9472150002E445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E84E8761D9472150002E445 /* LaunchScreen.storyboard */; };
 		6EBBFCA21D9576E8002C7C34 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBFCA11D9576E8002C7C34 /* CustomTableViewCell.swift */; };
+		6EBBFCA41D95A664002C7C34 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBFCA31D95A664002C7C34 /* WebViewController.swift */; };
 		EC1BDD80198C847E15DC91A7 /* Pods_StrivrTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC0588DA564B9B9D0ECCB2C /* Pods_StrivrTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		6E84E8771D9472150002E445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E84E8791D9472150002E445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EBBFCA11D9576E8002C7C34 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		6EBBFCA31D95A664002C7C34 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9B49ABE8D5BF52EB7349BA63 /* Pods-StrivrTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrivrTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StrivrTest/Pods-StrivrTest.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A153BD221446879B9F1102 /* Pods-StrivrTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrivrTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrivrTest/Pods-StrivrTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,10 +79,11 @@
 			children = (
 				6E84E86D1D9472150002E445 /* AppDelegate.swift */,
 				6E35D6731D94D1DD0048B839 /* Author.swift */,
+				6EBBFCA11D9576E8002C7C34 /* CustomTableViewCell.swift */,
 				6E2A0CDF1D9474EA001E7A2A /* GitHubAPIClient.swift */,
 				6E84E86F1D9472150002E445 /* ViewController.swift */,
+				6EBBFCA31D95A664002C7C34 /* WebViewController.swift */,
 				6E84E8711D9472150002E445 /* Main.storyboard */,
-				6EBBFCA11D9576E8002C7C34 /* CustomTableViewCell.swift */,
 				6E84E8741D9472150002E445 /* Assets.xcassets */,
 				6E84E8761D9472150002E445 /* LaunchScreen.storyboard */,
 				6E84E8791D9472150002E445 /* Info.plist */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2A0CE01D9474EA001E7A2A /* GitHubAPIClient.swift in Sources */,
+				6EBBFCA41D95A664002C7C34 /* WebViewController.swift in Sources */,
 				6EBBFCA21D9576E8002C7C34 /* CustomTableViewCell.swift in Sources */,
 				6E84E8701D9472150002E445 /* ViewController.swift in Sources */,
 				6E84E86E1D9472150002E445 /* AppDelegate.swift in Sources */,
