@@ -57,15 +57,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellReuseIdentifier , for: indexPath as IndexPath) as! CustomTableViewCell
-        
-        if let image = UIImage(contentsOfFile: Author.avatar[indexPath.row]) {
+    
+        if let imageURL = URL(string: Author.avatar[indexPath.row]) {
             
-            cell.authorAvatarImageView?.image = image
-            
+            do {
+                let imageData = try Data(contentsOf: imageURL)
+                cell.authorAvatarImageView?.image = UIImage(data: imageData)
+            } catch {
+                
+            }
         }
         
         cell.loginNameLabel?.text = "Username: \(Author.loginName[indexPath.row])"
         cell.timeStampLabel?.text = "Time: \(Author.timeStamp[indexPath.row])"
+        cell.timeStampLabel?.numberOfLines = 2
         cell.messageLabel?.text = "Message: \(Author.commitMessage[indexPath.row])"
         
         
