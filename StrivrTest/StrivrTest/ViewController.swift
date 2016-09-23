@@ -14,19 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        GitHubAPIClient.getCommitsForRepoByAuthor { (results, error) in
+        Author.getCommitsForRepoByAuthor { (authorDict, error) in
             
-            if let results = results {
-                
-                print("The count of Authors with commits: \(results.count)")
-                
-                for author in results {
-                    
-                    print("Individual author data: \(author)")
-                }
-            } else if let error = error {
-                print("There's been an error: \(error.localizedDescription)")
-            }
+            print("Checking")
         }
     }
     
