@@ -11,6 +11,7 @@ import UIKit
 class WebViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var commitWebView: UIWebView!
+    var selectedAuthorCommitURL: URL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +20,10 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         
 //        self.commitWebView = UIWebView()
 //        self.commitWebView.delegate = self
-        if let selectedAuthorCommitURL = ViewController().selectedAuthorCommitURL {
-            let request = URLRequest(url: selectedAuthorCommitURL)
+    
+            let request = URLRequest(url: self.selectedAuthorCommitURL)
             self.commitWebView.loadRequest(request)
-            
-        }
+        
     }
     
     override func didReceiveMemoryWarning() {

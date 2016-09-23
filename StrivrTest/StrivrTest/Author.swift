@@ -11,6 +11,7 @@ import Foundation
 class AuthorDataStore {
     
     static let authorStore = AuthorDataStore()
+    var authorDict = [String: [String: String]]()
     var loginName = [String]()
     var avatar = [String]()
     var timeStamp = [String]()
@@ -42,6 +43,22 @@ class AuthorDataStore {
                     self.timeStamp.append(dateTime)
                     self.commitMessage.append(message)
                     self.commitHTMLURL.append(htmlURL)
+
+//                    self.avatar = avatarURL
+//                    self.timeStamp = dateTime
+//                    self.commitMessage = message
+//                    self.commitHTMLURL = htmlURL
+//                    
+//                    for username in self.loginName {
+//                        
+//                        self.authorDict[username] = [
+//                            "avatar"    : self.avatar,
+//                            "timeStamp" : self.timeStamp,
+//                            "message"   : self.commitMessage,
+//                            "commitURL" : self.commitHTMLURL]
+//                        
+//                    }
+                    
                     
                     //  print("Login name: \(self.loginName) \nAvatar URL: \(self.avatar) \nTimeStamp: \n\(self.timeStamp) \nMessage: \(self.commitMessage) \nHTMLURL: \(self.commitHTMLURL)")
                     

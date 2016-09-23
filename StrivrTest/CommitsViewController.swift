@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CommitsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var authorTableView: UITableView!
-    let customTableViewCell = CustomTableViewCell()
+    @IBOutlet weak var commitsTableView: UITableView!
+    
+    let customTableViewCell = CommitsCustomTableViewCell()
     let authorData = AuthorDataStore.authorStore
     var selectedAuthorCommitURL: URL!
     
@@ -19,15 +20,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.authorTableView.delegate = self
-        self.authorTableView.dataSource = self
+        self.commitsTableView.delegate = self
+        self.commitsTableView.dataSource = self
         
         self.authorData.getCommitsForRepoByAuthor { (authorDict, error) in
             
             if authorDict != nil {
                 
                 print("This is the count of login names: \(self.authorData.loginName.count)")
-                self.authorTableView.reloadData()
+                self.commitsTableView.reloadData()
                 
             } else if let error = error {
                 print("There was a network error in the ViewController: \(error.localizedDescription)")
@@ -57,22 +58,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellReuseIdentifier , for: indexPath as IndexPath) as! CustomTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CommitsCustomTableViewCell.cellReuseIdentifier , for: indexPath as IndexPath) as! CommitsCustomTableViewCell
+
         if let imageURL = URL(string: self.authorData.avatar[indexPath.row]) {
             
             do {
                 let imageData = try Data(contentsOf: imageURL)
-                cell.authorAvatarImageView?.image = UIImage(data: imageData)
+                cell.userAvatarImageView?.image = UIImage(data: imageData)
+                // cell.authorAvatarImageView?.image = UIImage(data: imageData)
             } catch {
                 
             }
+            
+            //                        cell.loginNameLabel?.text = "Username: \(self.authorData.loginName[indexPath.row])"
+            //                        cell.timeStampLabel?.text = "Time: \(self.authorData.timeStamp[indexPath.row])"
+            //                        cell.timeStampLabel?.numberOfLines = 2
+            //                        cell.messageLabel?.text = "Message: \(self.authorData.commitMessage[indexPath.row])"
+            
         }
         
-        cell.loginNameLabel?.text = "Username: \(self.authorData.loginName[indexPath.row])"
-        cell.timeStampLabel?.text = "Time: \(self.authorData.timeStamp[indexPath.row])"
-        cell.timeStampLabel?.numberOfLines = 2
-        cell.messageLabel?.text = "Message: \(self.authorData.commitMessage[indexPath.row])"
+        //        cell.loginNameLabel?.text = "Username: \(self.authorData.loginName)"
+        //        cell.timeStampLabel?.text = "Time: \(self.authorData.timeStamp)"
+        //        cell.timeStampLabel?.numberOfLines = 2
+        //        cell.messageLabel?.text = "Message: \(self.authorData.commitMessage)"
         
         return cell
     }
@@ -82,16 +90,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //   let webView = UIWebView()
         
-        let url = URL(string: self.authorData.commitHTMLURL[indexPath.row])
-        self.selectedAuthorCommitURL = url
-
-        self.present(WebViewController(), animated: true, completion: nil)
+        let destinationVC = AuthorInfoViewController()
+        //        destinationVC.selectedAuthorCommitURL = URL(string: self.authorData.commitHTMLURL[indexPath.row])
         
+        //    self.selectedAuthorCommitURL = url
+        // destinationVC.selectedAuthorCommitURL = self.selectedAuthorCommitURL
+        
+        self.present(destinationVC, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
         
         
     }
