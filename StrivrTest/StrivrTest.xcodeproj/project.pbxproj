@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6E2A0CE01D9474EA001E7A2A /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2A0CDF1D9474EA001E7A2A /* GitHubAPIClient.swift */; };
 		6E35D6741D94D1DD0048B839 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35D6731D94D1DD0048B839 /* Author.swift */; };
-		6E35D6761D94DD750048B839 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35D6751D94DD750048B839 /* Secrets.swift */; };
 		6E84E86E1D9472150002E445 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E84E86D1D9472150002E445 /* AppDelegate.swift */; };
 		6E84E8701D9472150002E445 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E84E86F1D9472150002E445 /* ViewController.swift */; };
 		6E84E8731D9472150002E445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E84E8711D9472150002E445 /* Main.storyboard */; };
@@ -22,7 +21,6 @@
 		5AC0588DA564B9B9D0ECCB2C /* Pods_StrivrTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrivrTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2A0CDF1D9474EA001E7A2A /* GitHubAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
 		6E35D6731D94D1DD0048B839 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
-		6E35D6751D94DD750048B839 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Secrets.swift; path = ../Secrets.swift; sourceTree = "<group>"; };
 		6E84E86A1D9472150002E445 /* StrivrTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrivrTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E84E86D1D9472150002E445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E84E86F1D9472150002E445 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				6E84E86D1D9472150002E445 /* AppDelegate.swift */,
 				6E35D6731D94D1DD0048B839 /* Author.swift */,
 				6E2A0CDF1D9474EA001E7A2A /* GitHubAPIClient.swift */,
-				6E35D6751D94DD750048B839 /* Secrets.swift */,
 				6E84E86F1D9472150002E445 /* ViewController.swift */,
 				6E84E8711D9472150002E445 /* Main.storyboard */,
 				6E84E8741D9472150002E445 /* Assets.xcassets */,
@@ -222,7 +219,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2A0CE01D9474EA001E7A2A /* GitHubAPIClient.swift in Sources */,
-				6E35D6761D94DD750048B839 /* Secrets.swift in Sources */,
 				6E84E8701D9472150002E445 /* ViewController.swift in Sources */,
 				6E84E86E1D9472150002E445 /* AppDelegate.swift in Sources */,
 				6E35D6741D94D1DD0048B839 /* Author.swift in Sources */,
