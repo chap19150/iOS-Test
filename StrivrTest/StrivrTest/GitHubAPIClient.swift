@@ -17,7 +17,6 @@ class GitHubAPIClient {
             
             if let gitHubData = commitsByAuthorResponse.result.value as? [NSDictionary] {
                 
-                print("Getting data back from GitHUB: \(gitHubData)")
                 completion(gitHubData, nil)
                 
             } else if let error = commitsByAuthorResponse.result.error {

@@ -11,11 +11,11 @@ import Foundation
 class Author {
     
     static let authorStore = Author()
-    static var loginName: String?
-    static var avatar: String?
-    static var timeStamp: String?
-    static var commitMessage: String?
-    static var commitHTMLURL: String?
+    static var loginName = ""
+    static var avatar = ""
+    static var timeStamp = ""
+    static var commitMessage = ""
+    static var commitHTMLURL = ""
     
     class func getCommitsForRepoByAuthor(completion: @escaping ([NSDictionary]?, Error?) -> ()) {
         
@@ -43,7 +43,7 @@ class Author {
                     self.commitMessage = message
                     self.commitHTMLURL = htmlURL
                     
-                    print("Login name: /n\(self.loginName) Avatar URL: /n\(self.avatar) TimeStamp: /n\(self.timeStamp) Message: /n\(self.commitMessage) HTMLURL: /n\(self.commitHTMLURL)")
+                    print("Login name: \(self.loginName) \nAvatar URL: \(self.avatar) \nTimeStamp: \n\(self.timeStamp) \nMessage: \(self.commitMessage) \nHTMLURL: \(self.commitHTMLURL)")
                     
                     completion(authorsWithCommits, nil)
                 }

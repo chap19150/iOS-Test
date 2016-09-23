@@ -16,7 +16,6 @@ class ViewController: UIViewController {
         
         Author.getCommitsForRepoByAuthor { (authorDict, error) in
             
-            print("Checking")
         }
     }
     
