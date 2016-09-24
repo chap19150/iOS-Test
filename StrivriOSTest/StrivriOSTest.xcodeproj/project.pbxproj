@@ -85,8 +85,8 @@
 				6EC6FA301D96117C000AB2B1 /* GitHubAPIClient.swift */,
 				6EC6FA381D9612D2000AB2B1 /* WebViewController.swift */,
 				6EC6FA231D9610FA000AB2B1 /* Assets.xcassets */,
-				6EC6FA251D9610FA000AB2B1 /* LaunchScreen.storyboard */,
 				6E08E7FA1D9638AE00B34184 /* Main.storyboard */,
+				6EC6FA251D9610FA000AB2B1 /* LaunchScreen.storyboard */,
 				6EC6FA281D9610FA000AB2B1 /* Info.plist */,
 			);
 			path = StrivriOSTest;

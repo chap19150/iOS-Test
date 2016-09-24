@@ -9,16 +9,23 @@
 import Foundation
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webView: UIWebView!
-    let authorDataStore = AuthorDataStore.authorStore
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var urlString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let url = URL(string: urlString) else {
+        self.loadGitHubPage()
+    }
+    
+    func loadGitHubPage() {
+        
+        self.webView.delegate = self
+        
+        guard let url = URL(string: self.urlString) else {
             fatalError("There was an issue unwrapping the url in WebViewController")
         }
         
@@ -26,7 +33,19 @@ class WebViewController: UIViewController {
         self.webView.loadRequest(request)
     }
     
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        
+        self.activityIndicator.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.hidesWhenStopped = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
