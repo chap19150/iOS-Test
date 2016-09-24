@@ -11,6 +11,8 @@ import UIKit
 class AuthorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var authorTableView: UITableView!
+    let authorDataStore = AuthorDataStore.authorStore
+    var urlPlaceholder = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,18 @@ class AuthorViewController: UIViewController, UITableViewDataSource, UITableView
         
         self.authorTableView.delegate = self
         self.authorTableView.dataSource = self
+        
+        self.authorDataStore.getCommitsForRepoByAuthor { (authorDict, error) in
+            
+            if authorDict != nil {
+                
+                 self.authorTableView.reloadData()
+                
+            } else if error != nil {
+                
+                print("There was a network error in AuthoVC: \(error?.localizedDescription)")
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,7 +41,7 @@ class AuthorViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 30
+        return self.authorDataStore.loginName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,6 +50,23 @@ class AuthorViewController: UIViewController, UITableViewDataSource, UITableView
             fatalError("There was an issue unwrapping the AuthorCustomTableViewCell.")
         }
         
+        if let url = URL(string: self.authorDataStore.avatar[indexPath.row]) {
+           
+            do {
+                let imageData = try  Data(contentsOf: url)
+                cell.userAvatarImageView.image = UIImage(data: imageData)
+                
+            } catch {
+                print("There was an issue unwrapping the imageData for the Avatar in AuthorVC")
+            }
+        }
+
+        cell.usernameLabel.text = "Username: \(self.authorDataStore.loginName[indexPath.row])"
+        cell.dateLabel.text = "Date: \(self.authorDataStore.timeStamp[indexPath.row])"
+        cell.messageLabel.text = "Message: \(self.authorDataStore.commitMessage[indexPath.row])"
+        
+        self.urlPlaceholder = self.authorDataStore.commitHTMLURL[indexPath.row]
+        
         return cell
     }
     
@@ -43,7 +74,9 @@ class AuthorViewController: UIViewController, UITableViewDataSource, UITableView
 
         if segue.identifier == AuthorCustomTableViewCell.segueIdentifier {
             
-            if segue.destination as? CommitsViewController != nil {
+            if let destination = segue.destination as? WebViewController {
+                
+                destination.urlString = self.urlPlaceholder
                 
                 print("Moving from AuthorVC to CommitsVC")
             }

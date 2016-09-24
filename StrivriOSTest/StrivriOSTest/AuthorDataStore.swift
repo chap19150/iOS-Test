@@ -11,12 +11,12 @@ import Foundation
 class AuthorDataStore {
     
     static let authorStore = AuthorDataStore()
-    var authorDict = [String: AnyObject]()
-//    var loginName = [String]()
-//    var avatar = [String]()
-//    var timeStamp = [String]()
-//    var commitMessage = [String]()
-//    var commitHTMLURL = [String]()
+    
+    var loginName = [String]()
+    var avatar = [String]()
+    var timeStamp = [String]()
+    var commitMessage = [String]()
+    var commitHTMLURL = [String]()
     
     func getCommitsForRepoByAuthor(completion: @escaping ([NSDictionary]?, Error?) -> ()) {
         
@@ -38,11 +38,11 @@ class AuthorDataStore {
                             fatalError("There was an issue unwrapping the author information in the Author Class.")
                     }
                     
-//                    self.loginName.append(loginNameData)
-//                    self.avatar.append(avatarURL)
-//                    self.timeStamp.append(dateTime)
-//                    self.commitMessage.append(message)
-//                    self.commitHTMLURL.append(htmlURL)
+                    self.loginName.append(loginNameData)
+                    self.avatar.append(avatarURL)
+                    self.timeStamp.append(dateTime)
+                    self.commitMessage.append(message)
+                    self.commitHTMLURL.append(htmlURL)
                     
                     completion(authorsWithCommits, nil)
                 }

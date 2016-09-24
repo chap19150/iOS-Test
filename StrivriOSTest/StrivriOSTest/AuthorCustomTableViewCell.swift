@@ -12,9 +12,10 @@ import UIKit
 class AuthorCustomTableViewCell: UITableViewCell {
     
     static let reuseIdentifer = "authorInfo"
-    static let segueIdentifier = "authorCommits"
+    static let segueIdentifier = "webView"
     
     @IBOutlet weak var userAvatarImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var commitsLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
 }

@@ -12,11 +12,13 @@ import UIKit
 class WebViewController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
+    let authorDataStore = AuthorDataStore.authorStore
+    var urlString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let url = URL(string: "https://www.apple.com") else {
+        guard let url = URL(string: urlString) else {
             fatalError("There was an issue unwrapping the url in WebViewController")
         }
         
