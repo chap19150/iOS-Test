@@ -15,6 +15,8 @@
 		A71711CF1DA00A2600892975 /* RailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711CE1DA00A2600892975 /* RailsTests.swift */; };
 		A71711DA1DA00A2600892975 /* RailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711D91DA00A2600892975 /* RailsUITests.swift */; };
 		A71711E81DA00DDD00892975 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711E71DA00DDD00892975 /* Secrets.swift */; };
+		A71711EA1DA0185300892975 /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711E91DA0185300892975 /* GitHubAPIClient.swift */; };
+		A71711EC1DA01D4200892975 /* CommitsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711EB1DA01D4200892975 /* CommitsDataStore.swift */; };
 		B063BB3AF872051A4CD2CF7A /* Pods_RailsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B54A6B02CBEA7AFBAFB0FAA /* Pods_RailsUITests.framework */; };
 		B4FAC9919376DE30E25F3521 /* Pods_Rails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6C896B01792778ADE3C76 /* Pods_Rails.framework */; };
 		E1F3A58F355F92B99DF2AEC4 /* Pods_RailsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */; };
@@ -55,6 +57,8 @@
 		A71711D91DA00A2600892975 /* RailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailsUITests.swift; sourceTree = "<group>"; };
 		A71711DB1DA00A2600892975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A71711E71DA00DDD00892975 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		A71711E91DA0185300892975 /* GitHubAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
+		A71711EB1DA01D4200892975 /* CommitsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitsDataStore.swift; sourceTree = "<group>"; };
 		AD450BCCF14FEF96FF11EF6B /* Pods-RailsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RailsUITests/Pods-RailsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B209A0C1E1C370B4E934FF15 /* Pods-Rails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rails/Pods-Rails.release.xcconfig"; sourceTree = "<group>"; };
 		CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,8 @@
 			children = (
 				A71711B91DA00A2600892975 /* AppDelegate.swift */,
 				A71711BB1DA00A2600892975 /* ViewController.swift */,
+				A71711E91DA0185300892975 /* GitHubAPIClient.swift */,
+				A71711EB1DA01D4200892975 /* CommitsDataStore.swift */,
 				A71711BD1DA00A2600892975 /* Main.storyboard */,
 				A71711E71DA00DDD00892975 /* Secrets.swift */,
 				A71711C01DA00A2600892975 /* Assets.xcassets */,
@@ -436,9 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71711EA1DA0185300892975 /* GitHubAPIClient.swift in Sources */,
 				A71711BC1DA00A2600892975 /* ViewController.swift in Sources */,
 				A71711E81DA00DDD00892975 /* Secrets.swift in Sources */,
 				A71711BA1DA00A2600892975 /* AppDelegate.swift in Sources */,
+				A71711EC1DA01D4200892975 /* CommitsDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
