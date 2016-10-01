@@ -14,6 +14,10 @@
 		A71711C41DA00A2600892975 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71711C21DA00A2600892975 /* LaunchScreen.storyboard */; };
 		A71711CF1DA00A2600892975 /* RailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711CE1DA00A2600892975 /* RailsTests.swift */; };
 		A71711DA1DA00A2600892975 /* RailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711D91DA00A2600892975 /* RailsUITests.swift */; };
+		A71711E81DA00DDD00892975 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711E71DA00DDD00892975 /* Secrets.swift */; };
+		B063BB3AF872051A4CD2CF7A /* Pods_RailsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B54A6B02CBEA7AFBAFB0FAA /* Pods_RailsUITests.framework */; };
+		B4FAC9919376DE30E25F3521 /* Pods_Rails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6C896B01792778ADE3C76 /* Pods_Rails.framework */; };
+		E1F3A58F355F92B99DF2AEC4 /* Pods_RailsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B54A6B02CBEA7AFBAFB0FAA /* Pods_RailsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3577195E20EAD3F2597E20A4 /* Pods-RailsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RailsUITests/Pods-RailsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		88F96D83498A9AB9944C3DD1 /* Pods-RailsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A71711B61DA00A2600892975 /* Rails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71711B91DA00A2600892975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A71711BB1DA00A2600892975 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		A71711D51DA00A2600892975 /* RailsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RailsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71711D91DA00A2600892975 /* RailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailsUITests.swift; sourceTree = "<group>"; };
 		A71711DB1DA00A2600892975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A71711E71DA00DDD00892975 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		AD450BCCF14FEF96FF11EF6B /* Pods-RailsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RailsUITests/Pods-RailsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B209A0C1E1C370B4E934FF15 /* Pods-Rails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rails/Pods-Rails.release.xcconfig"; sourceTree = "<group>"; };
+		CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E48AFCB095C8F336AB519088 /* Pods-RailsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC1189FC073A905B6E3D2B28 /* Pods-Rails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rails/Pods-Rails.debug.xcconfig"; sourceTree = "<group>"; };
+		ECF6C896B01792778ADE3C76 /* Pods_Rails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FAC9919376DE30E25F3521 /* Pods_Rails.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F3A58F355F92B99DF2AEC4 /* Pods_RailsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B063BB3AF872051A4CD2CF7A /* Pods_RailsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09358D1F96BE5446B59F16F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC1189FC073A905B6E3D2B28 /* Pods-Rails.debug.xcconfig */,
+				B209A0C1E1C370B4E934FF15 /* Pods-Rails.release.xcconfig */,
+				88F96D83498A9AB9944C3DD1 /* Pods-RailsTests.debug.xcconfig */,
+				E48AFCB095C8F336AB519088 /* Pods-RailsTests.release.xcconfig */,
+				AD450BCCF14FEF96FF11EF6B /* Pods-RailsUITests.debug.xcconfig */,
+				3577195E20EAD3F2597E20A4 /* Pods-RailsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DF724BB8089833F507496C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECF6C896B01792778ADE3C76 /* Pods_Rails.framework */,
+				CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */,
+				0B54A6B02CBEA7AFBAFB0FAA /* Pods_RailsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A71711AD1DA00A2600892975 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +121,8 @@
 				A71711CD1DA00A2600892975 /* RailsTests */,
 				A71711D81DA00A2600892975 /* RailsUITests */,
 				A71711B71DA00A2600892975 /* Products */,
+				09358D1F96BE5446B59F16F5 /* Pods */,
+				7DF724BB8089833F507496C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +142,7 @@
 				A71711B91DA00A2600892975 /* AppDelegate.swift */,
 				A71711BB1DA00A2600892975 /* ViewController.swift */,
 				A71711BD1DA00A2600892975 /* Main.storyboard */,
+				A71711E71DA00DDD00892975 /* Secrets.swift */,
 				A71711C01DA00A2600892975 /* Assets.xcassets */,
 				A71711C21DA00A2600892975 /* LaunchScreen.storyboard */,
 				A71711C51DA00A2600892975 /* Info.plist */,
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A71711DE1DA00A2600892975 /* Build configuration list for PBXNativeTarget "Rails" */;
 			buildPhases = (
+				51538B5188227242D94819C4 /* [CP] Check Pods Manifest.lock */,
 				A71711B21DA00A2600892975 /* Sources */,
 				A71711B31DA00A2600892975 /* Frameworks */,
 				A71711B41DA00A2600892975 /* Resources */,
+				4B7A742AA3244FF522D87EAF /* [CP] Embed Pods Frameworks */,
+				0980BB2671939DB16884C995 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A71711E11DA00A2600892975 /* Build configuration list for PBXNativeTarget "RailsTests" */;
 			buildPhases = (
+				04BE3D867932184B15F24B58 /* [CP] Check Pods Manifest.lock */,
 				A71711C61DA00A2600892975 /* Sources */,
 				A71711C71DA00A2600892975 /* Frameworks */,
 				A71711C81DA00A2600892975 /* Resources */,
+				5706134D71F3AEDF52D12302 /* [CP] Embed Pods Frameworks */,
+				6BDCCEC852D6C3F329631049 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A71711E41DA00A2600892975 /* Build configuration list for PBXNativeTarget "RailsUITests" */;
 			buildPhases = (
+				1BB2DE19E920A48E51D8C48F /* [CP] Check Pods Manifest.lock */,
 				A71711D11DA00A2600892975 /* Sources */,
 				A71711D21DA00A2600892975 /* Frameworks */,
 				A71711D31DA00A2600892975 /* Resources */,
+				E3F7F4B6874BC148E230FBDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,12 +308,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04BE3D867932184B15F24B58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0980BB2671939DB16884C995 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rails/Pods-Rails-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BB2DE19E920A48E51D8C48F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4B7A742AA3244FF522D87EAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rails/Pods-Rails-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51538B5188227242D94819C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5706134D71F3AEDF52D12302 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BDCCEC852D6C3F329631049 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3F7F4B6874BC148E230FBDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RailsUITests/Pods-RailsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A71711B21DA00A2600892975 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A71711BC1DA00A2600892975 /* ViewController.swift in Sources */,
+				A71711E81DA00DDD00892975 /* Secrets.swift in Sources */,
 				A71711BA1DA00A2600892975 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +586,7 @@
 		};
 		A71711DF1DA00A2600892975 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC1189FC073A905B6E3D2B28 /* Pods-Rails.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B9NU7FF5WD;
@@ -424,6 +600,7 @@
 		};
 		A71711E01DA00A2600892975 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B209A0C1E1C370B4E934FF15 /* Pods-Rails.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B9NU7FF5WD;
@@ -437,6 +614,7 @@
 		};
 		A71711E21DA00A2600892975 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88F96D83498A9AB9944C3DD1 /* Pods-RailsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +630,7 @@
 		};
 		A71711E31DA00A2600892975 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48AFCB095C8F336AB519088 /* Pods-RailsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -467,6 +646,7 @@
 		};
 		A71711E51DA00A2600892975 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD450BCCF14FEF96FF11EF6B /* Pods-RailsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = B9NU7FF5WD;
@@ -481,6 +661,7 @@
 		};
 		A71711E61DA00A2600892975 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3577195E20EAD3F2597E20A4 /* Pods-RailsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = B9NU7FF5WD;
@@ -512,6 +693,7 @@
 				A71711E01DA00A2600892975 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A71711E11DA00A2600892975 /* Build configuration list for PBXNativeTarget "RailsTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +702,7 @@
 				A71711E31DA00A2600892975 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A71711E41DA00A2600892975 /* Build configuration list for PBXNativeTarget "RailsUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +711,7 @@
 				A71711E61DA00A2600892975 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
