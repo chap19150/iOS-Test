@@ -1,4 +1,4 @@
-##Programming Task - Irina Ernst
+##Programming Task 
 
 In order to be considered for the iOS position, you mush complete the following steps. 
 
