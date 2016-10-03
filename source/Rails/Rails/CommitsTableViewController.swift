@@ -10,52 +10,61 @@ import UIKit
 
 class CommitsTableViewController: UITableViewController {
 
-    let store = CommitsDataStore.sharedInstance
+   // let store = CommitsDataStore.sharedInstance
+    var author: Author!
+    var selectedCommit: Commit!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Rails"
-        
-        store.getCommitsWithCompletion { (success) in
-            if success {
-                OperationQueue.main.addOperation {
-                    self.tableView.reloadData()
-                }
-            } else {
-                print("ERROR: Unable to get commits for table view")
-            }
-        }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        setNav()
+    }
+    
+    func setNav(){
+        self.title = "Author's login name"
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.title = author.author_login_name
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return store.commits.count
-        return store.authors.count
+        return author.authorCommits.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! CommitsTableViewCell
-        cell.author = store.authors[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "commitCell", for: indexPath) as! CommitsTableViewCell
+        cell.commit = author.authorCommits[indexPath.row]
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedCommit = author.authorCommits[(tableView.indexPathForSelectedRow?.row)!]
+        //self.performSegue(withIdentifier: "toWebViewController", sender: selectedCommit)
+        //navigationController?.pushViewController(WebViewController., animated: true)
+        //tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toWebViewController" {
+            let webViewController = segue.destination as? WebViewController
+            if let commitIndex = tableView.indexPathForSelectedRow?.row {
+                webViewController?.selectedCommit = author.authorCommits[commitIndex]
+            }
+        }
+    }
+
 }

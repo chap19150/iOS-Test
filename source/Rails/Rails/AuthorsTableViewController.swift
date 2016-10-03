@@ -11,6 +11,7 @@ import UIKit
 class AuthorsTableViewController: UITableViewController {
         
     let store = CommitsDataStore.sharedInstance
+    var selectedAuthor: Author!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,35 +29,46 @@ class AuthorsTableViewController: UITableViewController {
         }
         
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+         self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return store.commits.count
         return store.authors.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! AuthorTableViewCell
-        cell.author = store.authors[indexPath.row]
-        
+        let author = store.authors[indexPath.row]
+        cell.author = author
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedAuthor = store.authors[(tableView.indexPathForSelectedRow?.row)!]
+        self.performSegue(withIdentifier: "toCommitsViewController", sender: selectedAuthor)
+        //navigationController?.pushViewController(CommitsTableViewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCommitsViewController" {
+            let commitViewController = segue.destination as? CommitsTableViewController
+            let authorIndex = tableView.indexPathForSelectedRow?.row
+            commitViewController?.author = store.authors[authorIndex!]
+            print(commitViewController?.author.author_login_name)
+        }
     }
 
 }
