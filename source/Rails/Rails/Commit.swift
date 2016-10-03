@@ -48,10 +48,5 @@ class Commit {
         self.commit_html_url = commit_html_url
         self.date = date
         self.author = author
-        
-        print("LALLALA COMMIT %@", self.commit_message)
-        print("LALLALA COMMIT URL %@", self.commit_html_url)
-        print("LALLALA COMMIT URL %@", self.date)
-        print("LALLALA AUTHOR %@", self.author.author_id)
     }
 }

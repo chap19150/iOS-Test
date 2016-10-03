@@ -42,7 +42,6 @@ class CommitsDataStore {
         for author in self.authors {
             if author.author_id == commit.author.author_id {
                 author.addCommit(commit: commit)
-                print("Old Author %@", author.author_login_name)
                 isOldAuthor = true
                 break
             }
@@ -51,7 +50,6 @@ class CommitsDataStore {
             let newAuthor: Author = commit.author
             newAuthor.addCommit(commit: commit)
             self.authors.append(newAuthor)
-            print("New Author %@", newAuthor.author_login_name)
         }
     }
    

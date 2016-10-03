@@ -101,19 +101,44 @@
         <scene sceneID="R0g-2z-Osr">
             <objects>
                 <tableViewController id="kgy-Pb-jv4" customClass="CommitsTableViewController" customModule="Rails" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="VWY-7x-NoP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" id="VWY-7x-NoP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="commitCell" rowHeight="64" id="sPA-UF-vHl" customClass="CommitsTableViewCell" customModule="Rails" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="64"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="commitCell" rowHeight="74" id="sPA-UF-vHl" customClass="CommitsTableViewCell" customModule="Rails" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sPA-UF-vHl" id="V2C-qR-g8T">
-                                    <frame key="frameInset" width="342" height="63"/>
+                                    <frame key="frameInset" width="342" height="73"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Comment message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0U-yj-PFP">
+                                            <frame key="frameInset" minX="20" minY="10" width="297" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date of Commit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx1-nV-qaL">
+                                            <frame key="frameInset" minX="20" minY="54" width="297" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.45346208756345174" green="0.45346208756345174" blue="0.45346208756345174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Rx1-nV-qaL" secondAttribute="trailing" constant="25" id="HUy-2s-0pa"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rx1-nV-qaL" secondAttribute="bottom" constant="5" id="O0O-eK-IIM"/>
+                                        <constraint firstItem="D0U-yj-PFP" firstAttribute="leading" secondItem="V2C-qR-g8T" secondAttribute="leading" constant="20" id="PP1-9G-aPS"/>
+                                        <constraint firstAttribute="trailing" secondItem="D0U-yj-PFP" secondAttribute="trailing" constant="25" id="T4T-Wr-gcu"/>
+                                        <constraint firstItem="Rx1-nV-qaL" firstAttribute="leading" secondItem="V2C-qR-g8T" secondAttribute="leading" constant="20" id="c5k-Ow-uFp"/>
+                                        <constraint firstItem="D0U-yj-PFP" firstAttribute="top" secondItem="V2C-qR-g8T" secondAttribute="top" constant="10" id="ok8-E7-gcg"/>
+                                        <constraint firstItem="Rx1-nV-qaL" firstAttribute="top" secondItem="D0U-yj-PFP" secondAttribute="bottom" constant="10" id="wVz-Gb-G0y"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="commitMessageLabel" destination="D0U-yj-PFP" id="xLg-qM-kvt"/>
+                                    <outlet property="dateOfCommitLabel" destination="Rx1-nV-qaL" id="Y0s-O4-K1E"/>
                                     <segue destination="BYZ-38-t0r" kind="push" identifier="toWebViewController" id="9NA-XE-JQN"/>
                                 </connections>
                             </tableViewCell>
@@ -135,7 +160,7 @@
                     </items>
                 </navigationBar>
             </objects>
-            <point key="canvasLocation" x="1649" y="733"/>
+            <point key="canvasLocation" x="1648.8" y="732.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hoV-Cc-tab">

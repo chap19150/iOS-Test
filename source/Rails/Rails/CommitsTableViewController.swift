@@ -10,13 +10,15 @@ import UIKit
 
 class CommitsTableViewController: UITableViewController {
 
-   // let store = CommitsDataStore.sharedInstance
     var author: Author!
     var selectedCommit: Commit!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNav()
+        
+        tableView.estimatedRowHeight = 74
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func setNav(){
@@ -53,9 +55,6 @@ class CommitsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedCommit = author.authorCommits[(tableView.indexPathForSelectedRow?.row)!]
-        //self.performSegue(withIdentifier: "toWebViewController", sender: selectedCommit)
-        //navigationController?.pushViewController(WebViewController., animated: true)
-        //tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,5 +65,16 @@ class CommitsTableViewController: UITableViewController {
             }
         }
     }
+    
+    // MARK: - Table view data source - Dynamic cells
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//         return UITableViewAutomaticDimension
+//    }
+//    
+    
 
 }

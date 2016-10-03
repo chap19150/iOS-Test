@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Rails
 //
-//  Created by Irina Kalashnikova on 10/1/16.
+//  Created by Irina Ernst on 10/1/16.
 //  Copyright © 2016 Irina Ernst. All rights reserved.
 //
 
