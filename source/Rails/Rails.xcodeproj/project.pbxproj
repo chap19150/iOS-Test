@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A71711BA1DA00A2600892975 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711B91DA00A2600892975 /* AppDelegate.swift */; };
-		A71711BC1DA00A2600892975 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711BB1DA00A2600892975 /* ViewController.swift */; };
+		A71711BC1DA00A2600892975 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711BB1DA00A2600892975 /* WebViewController.swift */; };
 		A71711BF1DA00A2600892975 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71711BD1DA00A2600892975 /* Main.storyboard */; };
 		A71711C11DA00A2600892975 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71711C01DA00A2600892975 /* Assets.xcassets */; };
 		A71711C41DA00A2600892975 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71711C21DA00A2600892975 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,12 @@
 		A71711E81DA00DDD00892975 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711E71DA00DDD00892975 /* Secrets.swift */; };
 		A71711EA1DA0185300892975 /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711E91DA0185300892975 /* GitHubAPIClient.swift */; };
 		A71711EC1DA01D4200892975 /* CommitsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711EB1DA01D4200892975 /* CommitsDataStore.swift */; };
+		A71711EE1DA01EC700892975 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711ED1DA01EC700892975 /* Commit.swift */; };
+		A71711F01DA0292B00892975 /* CommitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711EF1DA0292B00892975 /* CommitsTableViewCell.swift */; };
+		A71711F21DA0299C00892975 /* CommitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711F11DA0299C00892975 /* CommitsTableViewController.swift */; };
+		A71711F41DA17AF200892975 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711F31DA17AF200892975 /* Author.swift */; };
+		A71711F61DA1D1CA00892975 /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711F51DA1D1CA00892975 /* AuthorTableViewCell.swift */; };
+		A71711F81DA1E3E300892975 /* AuthorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711F71DA1E3E300892975 /* AuthorsTableViewController.swift */; };
 		B063BB3AF872051A4CD2CF7A /* Pods_RailsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B54A6B02CBEA7AFBAFB0FAA /* Pods_RailsUITests.framework */; };
 		B4FAC9919376DE30E25F3521 /* Pods_Rails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6C896B01792778ADE3C76 /* Pods_Rails.framework */; };
 		E1F3A58F355F92B99DF2AEC4 /* Pods_RailsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */; };
@@ -45,7 +51,7 @@
 		88F96D83498A9AB9944C3DD1 /* Pods-RailsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A71711B61DA00A2600892975 /* Rails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71711B91DA00A2600892975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A71711BB1DA00A2600892975 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A71711BB1DA00A2600892975 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A71711BE1DA00A2600892975 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A71711C01DA00A2600892975 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A71711C31DA00A2600892975 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +65,12 @@
 		A71711E71DA00DDD00892975 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A71711E91DA0185300892975 /* GitHubAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
 		A71711EB1DA01D4200892975 /* CommitsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitsDataStore.swift; sourceTree = "<group>"; };
+		A71711ED1DA01EC700892975 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		A71711EF1DA0292B00892975 /* CommitsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitsTableViewCell.swift; sourceTree = "<group>"; };
+		A71711F11DA0299C00892975 /* CommitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitsTableViewController.swift; sourceTree = "<group>"; };
+		A71711F31DA17AF200892975 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		A71711F51DA1D1CA00892975 /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
+		A71711F71DA1E3E300892975 /* AuthorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorsTableViewController.swift; sourceTree = "<group>"; };
 		AD450BCCF14FEF96FF11EF6B /* Pods-RailsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RailsUITests/Pods-RailsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B209A0C1E1C370B4E934FF15 /* Pods-Rails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rails/Pods-Rails.release.xcconfig"; sourceTree = "<group>"; };
 		CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,15 +155,11 @@
 		A71711B81DA00A2600892975 /* Rails */ = {
 			isa = PBXGroup;
 			children = (
-				A71711B91DA00A2600892975 /* AppDelegate.swift */,
-				A71711BB1DA00A2600892975 /* ViewController.swift */,
-				A71711E91DA0185300892975 /* GitHubAPIClient.swift */,
-				A71711EB1DA01D4200892975 /* CommitsDataStore.swift */,
-				A71711BD1DA00A2600892975 /* Main.storyboard */,
-				A71711E71DA00DDD00892975 /* Secrets.swift */,
-				A71711C01DA00A2600892975 /* Assets.xcassets */,
-				A71711C21DA00A2600892975 /* LaunchScreen.storyboard */,
-				A71711C51DA00A2600892975 /* Info.plist */,
+				A79642A31DA2107A00AFD4F3 /* Model */,
+				A79642A51DA210E300AFD4F3 /* View */,
+				A79642A41DA210BC00AFD4F3 /* Controllers */,
+				A79642A61DA210FF00AFD4F3 /* Utility */,
+				A79642A71DA2112200AFD4F3 /* Supporting Files */,
 			);
 			path = Rails;
 			sourceTree = "<group>";
@@ -172,6 +180,56 @@
 				A71711DB1DA00A2600892975 /* Info.plist */,
 			);
 			path = RailsUITests;
+			sourceTree = "<group>";
+		};
+		A79642A31DA2107A00AFD4F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A71711EB1DA01D4200892975 /* CommitsDataStore.swift */,
+				A71711ED1DA01EC700892975 /* Commit.swift */,
+				A71711F31DA17AF200892975 /* Author.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A79642A41DA210BC00AFD4F3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A71711BB1DA00A2600892975 /* WebViewController.swift */,
+				A71711F11DA0299C00892975 /* CommitsTableViewController.swift */,
+				A71711F71DA1E3E300892975 /* AuthorsTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A79642A51DA210E300AFD4F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A71711EF1DA0292B00892975 /* CommitsTableViewCell.swift */,
+				A71711F51DA1D1CA00892975 /* AuthorTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A79642A61DA210FF00AFD4F3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A71711E91DA0185300892975 /* GitHubAPIClient.swift */,
+				A71711E71DA00DDD00892975 /* Secrets.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		A79642A71DA2112200AFD4F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A71711B91DA00A2600892975 /* AppDelegate.swift */,
+				A71711BD1DA00A2600892975 /* Main.storyboard */,
+				A71711C01DA00A2600892975 /* Assets.xcassets */,
+				A71711C21DA00A2600892975 /* LaunchScreen.storyboard */,
+				A71711C51DA00A2600892975 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,10 +500,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71711F81DA1E3E300892975 /* AuthorsTableViewController.swift in Sources */,
+				A71711EE1DA01EC700892975 /* Commit.swift in Sources */,
+				A71711F01DA0292B00892975 /* CommitsTableViewCell.swift in Sources */,
 				A71711EA1DA0185300892975 /* GitHubAPIClient.swift in Sources */,
-				A71711BC1DA00A2600892975 /* ViewController.swift in Sources */,
+				A71711F41DA17AF200892975 /* Author.swift in Sources */,
+				A71711BC1DA00A2600892975 /* WebViewController.swift in Sources */,
+				A71711F21DA0299C00892975 /* CommitsTableViewController.swift in Sources */,
 				A71711E81DA00DDD00892975 /* Secrets.swift in Sources */,
 				A71711BA1DA00A2600892975 /* AppDelegate.swift in Sources */,
+				A71711F61DA1D1CA00892975 /* AuthorTableViewCell.swift in Sources */,
 				A71711EC1DA01D4200892975 /* CommitsDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
