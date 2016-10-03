@@ -33,6 +33,8 @@ class AuthorsTableViewController: UITableViewController {
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
+        tableView.tableFooterView = UIView()
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -101,42 +101,61 @@
         <scene sceneID="R0g-2z-Osr">
             <objects>
                 <tableViewController id="kgy-Pb-jv4" customClass="CommitsTableViewController" customModule="Rails" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" id="VWY-7x-NoP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="VWY-7x-NoP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="commitCell" rowHeight="74" id="sPA-UF-vHl" customClass="CommitsTableViewCell" customModule="Rails" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="74"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="commitCell" rowHeight="95" id="sPA-UF-vHl" customClass="CommitsTableViewCell" customModule="Rails" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sPA-UF-vHl" id="V2C-qR-g8T">
-                                    <frame key="frameInset" width="342" height="73"/>
+                                    <frame key="frameInset" width="342" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Comment message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0U-yj-PFP">
-                                            <frame key="frameInset" minX="20" minY="10" width="297" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date of Commit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx1-nV-qaL">
-                                            <frame key="frameInset" minX="20" minY="54" width="297" height="14.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date of Commit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx1-nV-qaL">
+                                            <frame key="frameInset" minX="92" minY="67" width="242" height="19"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.45346208756345174" green="0.45346208756345174" blue="0.45346208756345174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Comment message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0U-yj-PFP">
+                                            <frame key="frameInset" minX="92" minY="26" width="235" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iYH-NA-AeX">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="D6Q-lZ-GyN"/>
+                                                <constraint firstAttribute="height" constant="60" id="uhi-At-PQ3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-1U-SxK">
+                                            <frame key="frameInset" minX="92" minY="2" width="235" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="RP8-1U-SxK" firstAttribute="top" secondItem="V2C-qR-g8T" secondAttribute="top" constant="2" id="1gB-KZ-NZ5"/>
+                                        <constraint firstAttribute="trailing" secondItem="RP8-1U-SxK" secondAttribute="trailing" constant="25" id="6T9-Gp-ppw"/>
+                                        <constraint firstItem="Rx1-nV-qaL" firstAttribute="leading" secondItem="iYH-NA-AeX" secondAttribute="trailing" constant="4" id="DIi-d0-S7k"/>
                                         <constraint firstAttribute="trailing" secondItem="Rx1-nV-qaL" secondAttribute="trailing" constant="25" id="HUy-2s-0pa"/>
+                                        <constraint firstItem="iYH-NA-AeX" firstAttribute="top" secondItem="V2C-qR-g8T" secondAttribute="top" constant="4" id="Hta-cg-r1c"/>
                                         <constraint firstAttribute="bottom" secondItem="Rx1-nV-qaL" secondAttribute="bottom" constant="5" id="O0O-eK-IIM"/>
-                                        <constraint firstItem="D0U-yj-PFP" firstAttribute="leading" secondItem="V2C-qR-g8T" secondAttribute="leading" constant="20" id="PP1-9G-aPS"/>
-                                        <constraint firstAttribute="trailing" secondItem="D0U-yj-PFP" secondAttribute="trailing" constant="25" id="T4T-Wr-gcu"/>
-                                        <constraint firstItem="Rx1-nV-qaL" firstAttribute="leading" secondItem="V2C-qR-g8T" secondAttribute="leading" constant="20" id="c5k-Ow-uFp"/>
-                                        <constraint firstItem="D0U-yj-PFP" firstAttribute="top" secondItem="V2C-qR-g8T" secondAttribute="top" constant="10" id="ok8-E7-gcg"/>
+                                        <constraint firstItem="D0U-yj-PFP" firstAttribute="top" secondItem="RP8-1U-SxK" secondAttribute="bottom" constant="10" id="T22-2d-wdW"/>
+                                        <constraint firstAttribute="trailing" secondItem="D0U-yj-PFP" secondAttribute="trailing" constant="5" id="T4T-Wr-gcu"/>
+                                        <constraint firstItem="iYH-NA-AeX" firstAttribute="leading" secondItem="V2C-qR-g8T" secondAttribute="leading" constant="4" id="gqm-jE-FhX"/>
+                                        <constraint firstItem="D0U-yj-PFP" firstAttribute="leading" secondItem="iYH-NA-AeX" secondAttribute="trailing" constant="4" id="rjv-gy-XZm"/>
                                         <constraint firstItem="Rx1-nV-qaL" firstAttribute="top" secondItem="D0U-yj-PFP" secondAttribute="bottom" constant="10" id="wVz-Gb-G0y"/>
+                                        <constraint firstItem="RP8-1U-SxK" firstAttribute="leading" secondItem="iYH-NA-AeX" secondAttribute="trailing" constant="4" id="zTi-lh-R4B"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="authorImageView" destination="iYH-NA-AeX" id="SGt-qF-cm6"/>
+                                    <outlet property="authorUsernameLabel" destination="RP8-1U-SxK" id="bex-Cy-BPH"/>
                                     <outlet property="commitMessageLabel" destination="D0U-yj-PFP" id="xLg-qM-kvt"/>
                                     <outlet property="dateOfCommitLabel" destination="Rx1-nV-qaL" id="Y0s-O4-K1E"/>
                                     <segue destination="BYZ-38-t0r" kind="push" identifier="toWebViewController" id="9NA-XE-JQN"/>
