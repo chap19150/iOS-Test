@@ -17,8 +17,6 @@ class CommitsTableViewCell: UITableViewCell {
     
     var commit:Commit? {
         didSet{
-            print("COMMIT MESSAGE IN THE CELL: %@", commit?.commit_message)
-            print("COMMIT MESSAGE IN THE CELL/date: %@", commit?.date)
             if let commit_message = commit?.commit_message {
                 updateTextLabelWith(commit: commit_message)
             }
@@ -34,6 +32,16 @@ class CommitsTableViewCell: UITableViewCell {
     }
     
     private func updateDateLabelWith(date: String){
-        self.dateOfCommitLabel.text = date
+        //2016-10-03T13:11:08Z
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let dateObj = dateFormatter.date(from: date)
+        print("DATE %@",dateObj)
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateInFormat = dateFormatter.string(from: dateObj!)
+        self.dateOfCommitLabel.text = dateInFormat
+        
     }
 }

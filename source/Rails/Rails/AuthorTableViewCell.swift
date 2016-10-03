@@ -2,7 +2,7 @@
 //  AuthorTableViewCell.swift
 //  Rails
 //
-//  Created by Irina Kalashnikova on 10/2/16.
+//  Created by Irina Ernst on 10/2/16.
 //  Copyright © 2016 Irina Ernst. All rights reserved.
 //
 

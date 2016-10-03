@@ -2,7 +2,7 @@
 //  CommitsTableViewController.swift
 //  Rails
 //
-//  Created by Irina Kalashnikova on 10/1/16.
+//  Created by Irina Ernst on 10/1/16.
 //  Copyright © 2016 Irina Ernst. All rights reserved.
 //
 
@@ -19,6 +19,8 @@ class CommitsTableViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 74
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        tableView.tableFooterView = UIView()
     }
     
     func setNav(){
@@ -65,16 +67,5 @@ class CommitsTableViewController: UITableViewController {
             }
         }
     }
-    
-    // MARK: - Table view data source - Dynamic cells
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
-//    
-//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//         return UITableViewAutomaticDimension
-//    }
-//    
-    
 
 }

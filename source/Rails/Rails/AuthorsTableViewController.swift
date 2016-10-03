@@ -2,7 +2,7 @@
 //  AuthorsTableViewController.swift
 //  Rails
 //
-//  Created by Irina Kalashnikova on 10/2/16.
+//  Created by Irina Ernst on 10/2/16.
 //  Copyright © 2016 Irina Ernst. All rights reserved.
 //
 
@@ -28,11 +28,8 @@ class AuthorsTableViewController: UITableViewController {
             }
         }
         
-        // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.clearsSelectionOnViewWillAppear = false
+
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
