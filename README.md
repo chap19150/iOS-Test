@@ -26,8 +26,8 @@ In order to be considered for the iOS position, you mush complete the following 
 # Author: Irina Ernst Date: 10/03/2016  
 
 ### Prerequisites
-Xcode 8.0
-Swift 3.0
-Cocoapods 1.1.0
+* Xcode 8.0
+* Swift 3.0
+* Cocoapods 1.1.0
 
-Deployment: git push
+### Deployment: git push
