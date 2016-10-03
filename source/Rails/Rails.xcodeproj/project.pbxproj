@@ -1,0 +1,791 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A71711BA1DA00A2600892975 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711B91DA00A2600892975 /* AppDelegate.swift */; };
+		A71711BC1DA00A2600892975 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711BB1DA00A2600892975 /* WebViewController.swift */; };
+		A71711BF1DA00A2600892975 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71711BD1DA00A2600892975 /* Main.storyboard */; };
+		A71711C11DA00A2600892975 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71711C01DA00A2600892975 /* Assets.xcassets */; };
+		A71711C41DA00A2600892975 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71711C21DA00A2600892975 /* LaunchScreen.storyboard */; };
+		A71711CF1DA00A2600892975 /* RailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711CE1DA00A2600892975 /* RailsTests.swift */; };
+		A71711DA1DA00A2600892975 /* RailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711D91DA00A2600892975 /* RailsUITests.swift */; };
+		A71711E81DA00DDD00892975 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711E71DA00DDD00892975 /* Secrets.swift */; };
+		A71711EA1DA0185300892975 /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711E91DA0185300892975 /* GitHubAPIClient.swift */; };
+		A71711EC1DA01D4200892975 /* CommitsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711EB1DA01D4200892975 /* CommitsDataStore.swift */; };
+		A71711EE1DA01EC700892975 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711ED1DA01EC700892975 /* Commit.swift */; };
+		A71711F01DA0292B00892975 /* CommitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711EF1DA0292B00892975 /* CommitsTableViewCell.swift */; };
+		A71711F21DA0299C00892975 /* CommitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711F11DA0299C00892975 /* CommitsTableViewController.swift */; };
+		A71711F41DA17AF200892975 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711F31DA17AF200892975 /* Author.swift */; };
+		A71711F61DA1D1CA00892975 /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711F51DA1D1CA00892975 /* AuthorTableViewCell.swift */; };
+		A71711F81DA1E3E300892975 /* AuthorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71711F71DA1E3E300892975 /* AuthorsTableViewController.swift */; };
+		B063BB3AF872051A4CD2CF7A /* Pods_RailsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B54A6B02CBEA7AFBAFB0FAA /* Pods_RailsUITests.framework */; };
+		B4FAC9919376DE30E25F3521 /* Pods_Rails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6C896B01792778ADE3C76 /* Pods_Rails.framework */; };
+		E1F3A58F355F92B99DF2AEC4 /* Pods_RailsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A71711CB1DA00A2600892975 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A71711AE1DA00A2600892975 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A71711B51DA00A2600892975;
+			remoteInfo = Rails;
+		};
+		A71711D61DA00A2600892975 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A71711AE1DA00A2600892975 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A71711B51DA00A2600892975;
+			remoteInfo = Rails;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B54A6B02CBEA7AFBAFB0FAA /* Pods_RailsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3577195E20EAD3F2597E20A4 /* Pods-RailsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RailsUITests/Pods-RailsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		88F96D83498A9AB9944C3DD1 /* Pods-RailsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A71711B61DA00A2600892975 /* Rails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rails.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A71711B91DA00A2600892975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A71711BB1DA00A2600892975 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A71711BE1DA00A2600892975 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A71711C01DA00A2600892975 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A71711C31DA00A2600892975 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A71711C51DA00A2600892975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A71711CA1DA00A2600892975 /* RailsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RailsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A71711CE1DA00A2600892975 /* RailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailsTests.swift; sourceTree = "<group>"; };
+		A71711D01DA00A2600892975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A71711D51DA00A2600892975 /* RailsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RailsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A71711D91DA00A2600892975 /* RailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailsUITests.swift; sourceTree = "<group>"; };
+		A71711DB1DA00A2600892975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A71711E71DA00DDD00892975 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		A71711E91DA0185300892975 /* GitHubAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
+		A71711EB1DA01D4200892975 /* CommitsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitsDataStore.swift; sourceTree = "<group>"; };
+		A71711ED1DA01EC700892975 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		A71711EF1DA0292B00892975 /* CommitsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitsTableViewCell.swift; sourceTree = "<group>"; };
+		A71711F11DA0299C00892975 /* CommitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitsTableViewController.swift; sourceTree = "<group>"; };
+		A71711F31DA17AF200892975 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		A71711F51DA1D1CA00892975 /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
+		A71711F71DA1E3E300892975 /* AuthorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorsTableViewController.swift; sourceTree = "<group>"; };
+		AD450BCCF14FEF96FF11EF6B /* Pods-RailsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RailsUITests/Pods-RailsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B209A0C1E1C370B4E934FF15 /* Pods-Rails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rails/Pods-Rails.release.xcconfig"; sourceTree = "<group>"; };
+		CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E48AFCB095C8F336AB519088 /* Pods-RailsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC1189FC073A905B6E3D2B28 /* Pods-Rails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rails/Pods-Rails.debug.xcconfig"; sourceTree = "<group>"; };
+		ECF6C896B01792778ADE3C76 /* Pods_Rails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A71711B31DA00A2600892975 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FAC9919376DE30E25F3521 /* Pods_Rails.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A71711C71DA00A2600892975 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1F3A58F355F92B99DF2AEC4 /* Pods_RailsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A71711D21DA00A2600892975 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B063BB3AF872051A4CD2CF7A /* Pods_RailsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09358D1F96BE5446B59F16F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC1189FC073A905B6E3D2B28 /* Pods-Rails.debug.xcconfig */,
+				B209A0C1E1C370B4E934FF15 /* Pods-Rails.release.xcconfig */,
+				88F96D83498A9AB9944C3DD1 /* Pods-RailsTests.debug.xcconfig */,
+				E48AFCB095C8F336AB519088 /* Pods-RailsTests.release.xcconfig */,
+				AD450BCCF14FEF96FF11EF6B /* Pods-RailsUITests.debug.xcconfig */,
+				3577195E20EAD3F2597E20A4 /* Pods-RailsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DF724BB8089833F507496C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECF6C896B01792778ADE3C76 /* Pods_Rails.framework */,
+				CC836A914C3B9B72A5EBD873 /* Pods_RailsTests.framework */,
+				0B54A6B02CBEA7AFBAFB0FAA /* Pods_RailsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A71711AD1DA00A2600892975 = {
+			isa = PBXGroup;
+			children = (
+				A71711B81DA00A2600892975 /* Rails */,
+				A71711CD1DA00A2600892975 /* RailsTests */,
+				A71711D81DA00A2600892975 /* RailsUITests */,
+				A71711B71DA00A2600892975 /* Products */,
+				09358D1F96BE5446B59F16F5 /* Pods */,
+				7DF724BB8089833F507496C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A71711B71DA00A2600892975 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A71711B61DA00A2600892975 /* Rails.app */,
+				A71711CA1DA00A2600892975 /* RailsTests.xctest */,
+				A71711D51DA00A2600892975 /* RailsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A71711B81DA00A2600892975 /* Rails */ = {
+			isa = PBXGroup;
+			children = (
+				A79642A31DA2107A00AFD4F3 /* Model */,
+				A79642A51DA210E300AFD4F3 /* View */,
+				A79642A41DA210BC00AFD4F3 /* Controllers */,
+				A79642A61DA210FF00AFD4F3 /* Utility */,
+				A79642A71DA2112200AFD4F3 /* Supporting Files */,
+			);
+			path = Rails;
+			sourceTree = "<group>";
+		};
+		A71711CD1DA00A2600892975 /* RailsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A71711CE1DA00A2600892975 /* RailsTests.swift */,
+				A71711D01DA00A2600892975 /* Info.plist */,
+			);
+			path = RailsTests;
+			sourceTree = "<group>";
+		};
+		A71711D81DA00A2600892975 /* RailsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A71711D91DA00A2600892975 /* RailsUITests.swift */,
+				A71711DB1DA00A2600892975 /* Info.plist */,
+			);
+			path = RailsUITests;
+			sourceTree = "<group>";
+		};
+		A79642A31DA2107A00AFD4F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A71711EB1DA01D4200892975 /* CommitsDataStore.swift */,
+				A71711ED1DA01EC700892975 /* Commit.swift */,
+				A71711F31DA17AF200892975 /* Author.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A79642A41DA210BC00AFD4F3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A71711BB1DA00A2600892975 /* WebViewController.swift */,
+				A71711F11DA0299C00892975 /* CommitsTableViewController.swift */,
+				A71711F71DA1E3E300892975 /* AuthorsTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A79642A51DA210E300AFD4F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A71711EF1DA0292B00892975 /* CommitsTableViewCell.swift */,
+				A71711F51DA1D1CA00892975 /* AuthorTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A79642A61DA210FF00AFD4F3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A71711E91DA0185300892975 /* GitHubAPIClient.swift */,
+				A71711E71DA00DDD00892975 /* Secrets.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		A79642A71DA2112200AFD4F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A71711B91DA00A2600892975 /* AppDelegate.swift */,
+				A71711BD1DA00A2600892975 /* Main.storyboard */,
+				A71711C01DA00A2600892975 /* Assets.xcassets */,
+				A71711C21DA00A2600892975 /* LaunchScreen.storyboard */,
+				A71711C51DA00A2600892975 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A71711B51DA00A2600892975 /* Rails */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A71711DE1DA00A2600892975 /* Build configuration list for PBXNativeTarget "Rails" */;
+			buildPhases = (
+				51538B5188227242D94819C4 /* [CP] Check Pods Manifest.lock */,
+				A71711B21DA00A2600892975 /* Sources */,
+				A71711B31DA00A2600892975 /* Frameworks */,
+				A71711B41DA00A2600892975 /* Resources */,
+				4B7A742AA3244FF522D87EAF /* [CP] Embed Pods Frameworks */,
+				0980BB2671939DB16884C995 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rails;
+			productName = Rails;
+			productReference = A71711B61DA00A2600892975 /* Rails.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A71711C91DA00A2600892975 /* RailsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A71711E11DA00A2600892975 /* Build configuration list for PBXNativeTarget "RailsTests" */;
+			buildPhases = (
+				04BE3D867932184B15F24B58 /* [CP] Check Pods Manifest.lock */,
+				A71711C61DA00A2600892975 /* Sources */,
+				A71711C71DA00A2600892975 /* Frameworks */,
+				A71711C81DA00A2600892975 /* Resources */,
+				5706134D71F3AEDF52D12302 /* [CP] Embed Pods Frameworks */,
+				6BDCCEC852D6C3F329631049 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A71711CC1DA00A2600892975 /* PBXTargetDependency */,
+			);
+			name = RailsTests;
+			productName = RailsTests;
+			productReference = A71711CA1DA00A2600892975 /* RailsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A71711D41DA00A2600892975 /* RailsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A71711E41DA00A2600892975 /* Build configuration list for PBXNativeTarget "RailsUITests" */;
+			buildPhases = (
+				1BB2DE19E920A48E51D8C48F /* [CP] Check Pods Manifest.lock */,
+				A71711D11DA00A2600892975 /* Sources */,
+				A71711D21DA00A2600892975 /* Frameworks */,
+				A71711D31DA00A2600892975 /* Resources */,
+				E3F7F4B6874BC148E230FBDA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A71711D71DA00A2600892975 /* PBXTargetDependency */,
+			);
+			name = RailsUITests;
+			productName = RailsUITests;
+			productReference = A71711D51DA00A2600892975 /* RailsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A71711AE1DA00A2600892975 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Irina Ernst";
+				TargetAttributes = {
+					A71711B51DA00A2600892975 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B9NU7FF5WD;
+						ProvisioningStyle = Automatic;
+					};
+					A71711C91DA00A2600892975 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B9NU7FF5WD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A71711B51DA00A2600892975;
+					};
+					A71711D41DA00A2600892975 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B9NU7FF5WD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A71711B51DA00A2600892975;
+					};
+				};
+			};
+			buildConfigurationList = A71711B11DA00A2600892975 /* Build configuration list for PBXProject "Rails" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A71711AD1DA00A2600892975;
+			productRefGroup = A71711B71DA00A2600892975 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A71711B51DA00A2600892975 /* Rails */,
+				A71711C91DA00A2600892975 /* RailsTests */,
+				A71711D41DA00A2600892975 /* RailsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A71711B41DA00A2600892975 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71711C41DA00A2600892975 /* LaunchScreen.storyboard in Resources */,
+				A71711C11DA00A2600892975 /* Assets.xcassets in Resources */,
+				A71711BF1DA00A2600892975 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A71711C81DA00A2600892975 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A71711D31DA00A2600892975 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04BE3D867932184B15F24B58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0980BB2671939DB16884C995 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rails/Pods-Rails-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BB2DE19E920A48E51D8C48F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4B7A742AA3244FF522D87EAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rails/Pods-Rails-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51538B5188227242D94819C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5706134D71F3AEDF52D12302 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BDCCEC852D6C3F329631049 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RailsTests/Pods-RailsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3F7F4B6874BC148E230FBDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RailsUITests/Pods-RailsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A71711B21DA00A2600892975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71711F81DA1E3E300892975 /* AuthorsTableViewController.swift in Sources */,
+				A71711EE1DA01EC700892975 /* Commit.swift in Sources */,
+				A71711F01DA0292B00892975 /* CommitsTableViewCell.swift in Sources */,
+				A71711EA1DA0185300892975 /* GitHubAPIClient.swift in Sources */,
+				A71711F41DA17AF200892975 /* Author.swift in Sources */,
+				A71711BC1DA00A2600892975 /* WebViewController.swift in Sources */,
+				A71711F21DA0299C00892975 /* CommitsTableViewController.swift in Sources */,
+				A71711E81DA00DDD00892975 /* Secrets.swift in Sources */,
+				A71711BA1DA00A2600892975 /* AppDelegate.swift in Sources */,
+				A71711F61DA1D1CA00892975 /* AuthorTableViewCell.swift in Sources */,
+				A71711EC1DA01D4200892975 /* CommitsDataStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A71711C61DA00A2600892975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71711CF1DA00A2600892975 /* RailsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A71711D11DA00A2600892975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71711DA1DA00A2600892975 /* RailsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A71711CC1DA00A2600892975 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A71711B51DA00A2600892975 /* Rails */;
+			targetProxy = A71711CB1DA00A2600892975 /* PBXContainerItemProxy */;
+		};
+		A71711D71DA00A2600892975 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A71711B51DA00A2600892975 /* Rails */;
+			targetProxy = A71711D61DA00A2600892975 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A71711BD1DA00A2600892975 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A71711BE1DA00A2600892975 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A71711C21DA00A2600892975 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A71711C31DA00A2600892975 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A71711DC1DA00A2600892975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A71711DD1DA00A2600892975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A71711DF1DA00A2600892975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC1189FC073A905B6E3D2B28 /* Pods-Rails.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B9NU7FF5WD;
+				INFOPLIST_FILE = Rails/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.irina.Rails;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A71711E01DA00A2600892975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B209A0C1E1C370B4E934FF15 /* Pods-Rails.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B9NU7FF5WD;
+				INFOPLIST_FILE = Rails/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.irina.Rails;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A71711E21DA00A2600892975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88F96D83498A9AB9944C3DD1 /* Pods-RailsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = B9NU7FF5WD;
+				INFOPLIST_FILE = RailsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.irina.RailsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rails.app/Rails";
+			};
+			name = Debug;
+		};
+		A71711E31DA00A2600892975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48AFCB095C8F336AB519088 /* Pods-RailsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = B9NU7FF5WD;
+				INFOPLIST_FILE = RailsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.irina.RailsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rails.app/Rails";
+			};
+			name = Release;
+		};
+		A71711E51DA00A2600892975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD450BCCF14FEF96FF11EF6B /* Pods-RailsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = B9NU7FF5WD;
+				INFOPLIST_FILE = RailsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.irina.RailsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Rails;
+			};
+			name = Debug;
+		};
+		A71711E61DA00A2600892975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3577195E20EAD3F2597E20A4 /* Pods-RailsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = B9NU7FF5WD;
+				INFOPLIST_FILE = RailsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.irina.RailsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Rails;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A71711B11DA00A2600892975 /* Build configuration list for PBXProject "Rails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A71711DC1DA00A2600892975 /* Debug */,
+				A71711DD1DA00A2600892975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A71711DE1DA00A2600892975 /* Build configuration list for PBXNativeTarget "Rails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A71711DF1DA00A2600892975 /* Debug */,
+				A71711E01DA00A2600892975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A71711E11DA00A2600892975 /* Build configuration list for PBXNativeTarget "RailsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A71711E21DA00A2600892975 /* Debug */,
+				A71711E31DA00A2600892975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A71711E41DA00A2600892975 /* Build configuration list for PBXNativeTarget "RailsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A71711E51DA00A2600892975 /* Debug */,
+				A71711E61DA00A2600892975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A71711AE1DA00A2600892975 /* Project object */;
+}

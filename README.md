@@ -1,4 +1,4 @@
-##Programming Task
+##Programming Task 
 
 In order to be considered for the iOS position, you mush complete the following steps. 
 
@@ -19,3 +19,15 @@ In order to be considered for the iOS position, you mush complete the following 
 	- If you have time, implement pagination
 4. Commit and Push your code to your new repository
 5. Send us a pull request, we will review your code and get back to you
+
+
+ 
+
+# Author: Irina Ernst Date: 10/03/2016  
+
+### Prerequisites
+* Xcode 8.0
+* Swift 3.0
+* Cocoapods 1.1.0
+
+### Deployment: git push
