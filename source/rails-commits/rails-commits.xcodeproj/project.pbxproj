@@ -18,6 +18,8 @@
 		1FC09E191DB951FA00A4F11E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC09E181DB951F900A4F11E /* APIClient.swift */; };
 		1FFD2CDE1DBAB668001978D4 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CDD1DBAB668001978D4 /* Author.swift */; };
 		1FFD2CE01DBAB69F001978D4 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CDF1DBAB69F001978D4 /* Commit.swift */; };
+		1FFD2CE31DBC3A28001978D4 /* commitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD2CE21DBC3A28001978D4 /* commitCell.xib */; };
+		1FFD2CE51DBC3DF8001978D4 /* commitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CE41DBC3DF8001978D4 /* commitCell.swift */; };
 		2C0FF6E13A68836945177374 /* Pods_rails_commits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905EB2A0878524DC3237C847 /* Pods_rails_commits.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		1FC09E181DB951F900A4F11E /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		1FFD2CDD1DBAB668001978D4 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		1FFD2CDF1DBAB69F001978D4 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		1FFD2CE21DBC3A28001978D4 /* commitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = commitCell.xib; sourceTree = "<group>"; };
+		1FFD2CE41DBC3DF8001978D4 /* commitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commitCell.swift; sourceTree = "<group>"; };
 		6D04A51CDC9782AAF3DB1399 /* Pods-rails-commits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rails-commits.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rails-commits/Pods-rails-commits.debug.xcconfig"; sourceTree = "<group>"; };
 		905EB2A0878524DC3237C847 /* Pods_rails_commits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rails_commits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +119,8 @@
 				1FC09DE71DB9380500A4F11E /* AppDelegate.swift */,
 				1FC09DE91DB9380500A4F11E /* ViewController.swift */,
 				1FC09E181DB951F900A4F11E /* APIClient.swift */,
+				1FFD2CE21DBC3A28001978D4 /* commitCell.xib */,
+				1FFD2CE41DBC3DF8001978D4 /* commitCell.swift */,
 				1FFD2CE11DBAB6B6001978D4 /* Models */,
 				1FC09DEB1DB9380600A4F11E /* Main.storyboard */,
 				1FC09DF11DB9380600A4F11E /* Assets.xcassets */,
@@ -282,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFD2CE31DBC3A28001978D4 /* commitCell.xib in Resources */,
 				1FC09DF51DB9380600A4F11E /* LaunchScreen.storyboard in Resources */,
 				1FC09DF21DB9380600A4F11E /* Assets.xcassets in Resources */,
 				1FC09DED1DB9380600A4F11E /* Main.storyboard in Resources */,
@@ -358,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFD2CE01DBAB69F001978D4 /* Commit.swift in Sources */,
+				1FFD2CE51DBC3DF8001978D4 /* commitCell.swift in Sources */,
 				1FC09DEA1DB9380500A4F11E /* ViewController.swift in Sources */,
 				1FC09DF01DB9380600A4F11E /* rails_commits.xcdatamodeld in Sources */,
 				1FC09DE81DB9380500A4F11E /* AppDelegate.swift in Sources */,
