@@ -18,6 +18,7 @@
 		D7628E901DB0799D00F617FE /* CommitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7628E8F1DB0799D00F617FE /* CommitsTableViewController.swift */; };
 		D7628E931DB086A100F617FE /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7628E911DB086A100F617FE /* AuthorTableViewCell.swift */; };
 		D7628E941DB086A100F617FE /* AuthorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7628E921DB086A100F617FE /* AuthorTableViewCell.xib */; };
+		D7D31F6C1DBFF8AE0036D07E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D31F6B1DBFF8AE0036D07E /* WebViewController.swift */; };
 		DD525E07ACA37AA05923F0D1 /* Pods_StrivrTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E21861C58176394B4EE6F2 /* Pods_StrivrTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		D7628E8F1DB0799D00F617FE /* CommitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitsTableViewController.swift; sourceTree = "<group>"; };
 		D7628E911DB086A100F617FE /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
 		D7628E921DB086A100F617FE /* AuthorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorTableViewCell.xib; sourceTree = "<group>"; };
+		D7D31F6B1DBFF8AE0036D07E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EE7D8525ADB0B5D84513AE38 /* Pods_StrivrTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrivrTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				D7628E911DB086A100F617FE /* AuthorTableViewCell.swift */,
 				D7628E921DB086A100F617FE /* AuthorTableViewCell.xib */,
 				D7628E631DB0682000F617FE /* Main.storyboard */,
+				D7D31F6B1DBFF8AE0036D07E /* WebViewController.swift */,
 				D7628E661DB0682000F617FE /* Assets.xcassets */,
 				D7628E681DB0682000F617FE /* LaunchScreen.storyboard */,
 				D7628E6B1DB0682000F617FE /* Info.plist */,
@@ -440,6 +443,7 @@
 				D7628E901DB0799D00F617FE /* CommitsTableViewController.swift in Sources */,
 				D7628E931DB086A100F617FE /* AuthorTableViewCell.swift in Sources */,
 				D7628E601DB0682000F617FE /* AppDelegate.swift in Sources */,
+				D7D31F6C1DBFF8AE0036D07E /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

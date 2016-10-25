@@ -9,26 +9,20 @@
 import UIKit
 import SDWebImage
 
-
-// add clicking on user takes you to the commit in a web view
-
-
 class CommitsTableViewController: UITableViewController {
     
     let downloader : SDWebImageDownloader = SDWebImageDownloader.shared()
     var images : [Int : UIImage] = [:]
     var repoData : [[String:AnyObject]]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getRepoData(url: "https://api.github.com/repos/rails/rails/commits")
         
+        // register custom tableview cell
         self.tableView.register(UINib.init(nibName: "AuthorTableViewCell", bundle: nil), forCellReuseIdentifier: "AuthorCell")
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.title = "Commits for rails/rails"
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,12 +33,10 @@ class CommitsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if let data = self.repoData {
             return data.count
         }
@@ -88,56 +80,41 @@ class CommitsTableViewController: UITableViewController {
         }
         
         let info = json as? [[String:AnyObject]]
-//        print(info)
-        
         
         if (parseError == nil && info != nil)
         {
             self.repoData = info!
-//            print(self.repoData.count)
         }
         else {
             self.repoData = []
         }
-        
+        // now that data has downloaded, reload table
         DispatchQueue.main.async(execute: {
             self.tableView.reloadData()
             return
         })
     }
     
-
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "AuthorCell") as! AuthorTableViewCell
-        
+        // ensure data exists
         if let data = self.repoData , data.count > 0 {
+            // get data for given row
             let commit = data[indexPath.row]
             let commitInfo = commit["commit"] as! [String: AnyObject]
             cell.message.text = commitInfo["message"] as? String
             let authorInfo = commit["author"] as! [String : AnyObject]
-//            let imageData = Data.init(contentsOf: URL.init(authorInfo["avatar_url"] as! String))
-//            var imageData : Data? = nil
-//            do {
-//                imageData = try Data.init(contentsOf: URL.init(string: authorInfo["avatar_url"] as! String)!)
-//            } catch {
-//                print("there was an error getting the image data")
-//            }
-//            
-//            if imageData != nil {
-//                cell.avatar.image = UIImage.init(data: imageData!)
-//            }
+            
+            // if image dictionary has the image, give the cell that image
             if let image = self.images[indexPath.row] {
                 cell.avatar.image = image
             }
-                
-            
-            
+    
+            // Otherwise, download image asynchronously to avoid delays in tableview scrolling
             else {
                 downloader.downloadImage(with: URL.init(string: authorInfo["avatar_url"] as! String)!, options: [], progress: {(recievedSize : Int, expectedSize :Int) in }, completed: {(image : UIImage?, data : Data?, error : Error?, finished : Bool) in
                 if image != nil && finished == true {
-//                    cell.avatar.image = image
+                    // update image dictionary and reload the row
                     self.images[indexPath.row] = image!
                     DispatchQueue.main.async(execute: {
                         self.tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -147,9 +124,10 @@ class CommitsTableViewController: UITableViewController {
             }
             
             
-            
+            // set name
             cell.name.text = authorInfo["login"] as? String
-//            print(authorInfo["date"])
+            
+            // get date if it exists and format it, or set date to empty string
             if let date = (commitInfo["author"] as! [String : String])["date"] {
                 let index = date.index((date.startIndex), offsetBy: 10)
                 let range = (date.startIndex)..<index
@@ -158,63 +136,42 @@ class CommitsTableViewController: UITableViewController {
             else{
                 cell.date.text = ""
             }
-            
-            
-            
-            
-            
         }
-        
-
-        
-
         return cell
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // ensure the data exists
+        if let data = self.repoData {
+            // get data, URL, and name for current row
+            let commit = data[indexPath.row] 
+            let url = URL.init(string: commit["html_url"] as! String)
+            let cell : AuthorTableViewCell = self.tableView.cellForRow(at: indexPath) as! AuthorTableViewCell
+            // bundle the data to send along with segue
+            let dict = ["name" : cell.name.text, "url" : url] as [String : Any]
+            self.performSegue(withIdentifier: "goToWebView", sender: dict)
+        }
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        // get the data I passed in
+        let dict = sender as! [String : Any]
+        let name = dict["name"] as! String
+        let url = dict["url"] as! URL
+        self.navigationItem.backBarButtonItem?.title = "Back"
+        
+        // get the destination view controller
+        if let destination = segue.destination as? WebViewController {
+            
+            // set destination view controller properties
+            destination.url = url
+            destination.name = name
+        }
     }
-    */
-
+ 
 }
