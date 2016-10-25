@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Author {
     
@@ -14,5 +15,6 @@ struct Author {
     var URL: String?
     var avatarURL: String?
     var commits: [Commit]?
+    var avatarImage: UIImage?
     
 }

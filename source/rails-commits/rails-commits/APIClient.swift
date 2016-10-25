@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class APIClient: NSObject {
     
@@ -46,7 +47,7 @@ class APIClient: NSObject {
                     // ...commit info
                     guard let timestamp = committer["date"] else { return }
                     guard let message = commitInfo["message"] as? String else { return }
-                    guard let commitURL = commit["url"] as? String else { return }
+                    guard let commitURL = commit["html_url"] as? String else { return }
                     
                     // Create a Commit instance
                     let newCommit = Commit(URL: commitURL,
@@ -59,7 +60,8 @@ class APIClient: NSObject {
                         let newAuthor = Author(username: username,
                                                URL: authorURL,
                                                avatarURL: avatarURL,
-                                               commits: [])
+                                               commits: [],
+                                               avatarImage: nil)
                         authors.append(newAuthor)
                     }
                     

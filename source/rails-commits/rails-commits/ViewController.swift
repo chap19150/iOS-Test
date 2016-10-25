@@ -11,33 +11,82 @@ import UIKit
 class ViewController: UITableViewController {
     
     var authors:[Author] = []
+    let placeholderImage: UIImage = UIImage(named: "placeholder")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Register nib
-        tableView.register(UINib(nibName: "commitCell", bundle: nil), forCellReuseIdentifier: "cell")
+        // Can we do nav bar stuff here?
+        //TODO: test if navigation bar properties set here persist into the next VC
+        self.navigationController?.navigationBar.backgroundColor = UIColor.orange
         
-        // Access the GitHub API and get a list of recent commits to the rails repo.
+        // Access the GitHub API and get the last 30 commits to the rails repo.
         APIClient().getRailsCommits(number: 30) { (authors) in
             
+            // Populate the tableview with everything except the avatars
             self.authors = authors
             self.tableView.reloadData()
             
+            // Get each author's avatar and add it to the table as it comes in
+            let imageClient = ImageClient()
+            
+            for index in self.authors.indices {
+                imageClient.getImage(for: self.authors[index], completion: { (avatar) in
+                    
+                    self.authors[index].avatarImage = avatar
+                    self.tableView.reloadData()
+                    
+                })
+            }
         }
     }
 
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        // Get the author this section represents
+        let author = authors[section]
+
+        // Load the header view xib
+        guard let headerView = Bundle.main.loadNibNamed("authorHeaderView", owner: self, options: nil)?.first as? authorHeaderView else {
+            print("Couldn't load nib")
+            return UIView()
+        }
+        // Set properties
+        headerView.authorLabel.text = author.username
+        headerView.backgroundColor = UIColor.yellow
+        // Set the avatar image if it's come in already; if it hasn't yet, use the placeholder
+        if let avatar = author.avatarImage {
+            headerView.avatarView.image = avatar
+        } else {
+            headerView.avatarView.image = self.placeholderImage
+        }
+        
+        return headerView
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Get a cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! commitCell
-        // Find the commit
+        
+        // Get the right commit
         let commit = authors[indexPath.section].commits?[indexPath.row]
+        
         // Set the cell properties
         cell.timeLabel.text = commit!.timestamp
         cell.messageTextView.text = commit!.message
         cell.authorLabel.text = commit!.author
-        cell.avatarView.image = UIImage(named: "test")
+        // Set the avatar image if it's come in already; if it hasn't yet, use the placeholder
+        if let avatar = authors[indexPath.section].avatarImage {
+            cell.avatarView.image = avatar
+        } else {
+            cell.avatarView.image = self.placeholderImage
+        }
         
         return cell
     }
@@ -49,6 +98,19 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.authors[section].commits!.count
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Pass the selected commit's URL to the webview
+        let indexPath = self.tableView.indexPathForSelectedRow!
+        let url = authors[indexPath.section].commits?[indexPath.row].URL
+        if let destVC: WebViewController = segue.destination as? WebViewController {
+            destVC.urlString = url
+        }
+        
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
