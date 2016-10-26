@@ -10,7 +10,8 @@ import UIKit
 
 class AuthorTableViewCell: UITableViewCell {
 
-    @IBOutlet var commitButton: UIButton!
+
+    @IBOutlet var commitButton: UILabel!
     @IBOutlet var date: UILabel!
     @IBOutlet var message: UILabel!
     @IBOutlet var name: UILabel!

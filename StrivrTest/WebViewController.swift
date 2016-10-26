@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MBProgressHUD
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate {
 
     
     // Standard web view actions
@@ -35,9 +36,21 @@ class WebViewController: UIViewController {
     
     var url : URL?
     var name : String?
+    var progressHUD : MBProgressHUD?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.progressHUD != nil {
+            self.progressHUD?.hide(false)
+        }
+            
+        else {
+            self.progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
+            self.progressHUD?.labelText = "Loading..."
+        }
+        
+        webView.delegate = self
         
         // open the desired web page
         webView.loadRequest(URLRequest.init(url: url!))
@@ -47,6 +60,10 @@ class WebViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.progressHUD?.hide(true)
     }
     
 

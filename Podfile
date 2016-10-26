@@ -7,6 +7,7 @@ target 'StrivrTest' do
 
   # Pods for StrivrTest
   pod 'SDWebImage'
+  pod 'MBProgressHUD', '~> 0.9.2'
 
   target 'StrivrTestTests' do
     inherit! :search_paths

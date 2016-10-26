@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NqX-Ge-qZg" id="H3y-BZ-fAE">
-                <frame key="frameInset" width="320" height="99"/>
+                <frame key="frameInset" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="haileysholty21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-a1-iuY">
@@ -43,33 +43,34 @@
                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLL-hZ-ebg">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View commit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BZ-zF-Zc1">
                         <constraints>
-                            <constraint firstAttribute="width" constant="89" id="8K2-2h-jJU"/>
-                            <constraint firstAttribute="height" constant="20" id="Vei-pv-R2i"/>
+                            <constraint firstAttribute="width" constant="89" id="IP0-ev-crD"/>
+                            <constraint firstAttribute="height" constant="20" id="hqY-PQ-mah"/>
                         </constraints>
-                        <state key="normal" title="View commit"/>
-                    </button>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="t7W-lr-J75" firstAttribute="leading" secondItem="H3y-BZ-fAE" secondAttribute="leading" constant="15" id="3XC-fh-8aJ"/>
-                    <constraint firstItem="DLL-hZ-ebg" firstAttribute="top" secondItem="JJI-JE-frg" secondAttribute="bottom" constant="2" id="Eqm-ox-eOT"/>
+                    <constraint firstAttribute="bottom" secondItem="9BZ-zF-Zc1" secondAttribute="bottom" constant="8" id="A8w-aL-NJq"/>
                     <constraint firstAttribute="trailing" secondItem="JJI-JE-frg" secondAttribute="trailing" constant="8" id="Ia4-P0-xw3"/>
                     <constraint firstItem="k8r-yI-LY2" firstAttribute="leading" secondItem="zbE-a1-iuY" secondAttribute="trailing" constant="8" id="K7M-Ou-6VW"/>
                     <constraint firstItem="zbE-a1-iuY" firstAttribute="leading" secondItem="t7W-lr-J75" secondAttribute="trailing" constant="8" id="Xqp-EB-jDO"/>
                     <constraint firstItem="k8r-yI-LY2" firstAttribute="top" secondItem="H3y-BZ-fAE" secondAttribute="top" constant="12" id="Y5c-PA-eZ6"/>
-                    <constraint firstAttribute="bottom" secondItem="DLL-hZ-ebg" secondAttribute="bottom" constant="8" id="epN-FP-owI"/>
+                    <constraint firstItem="9BZ-zF-Zc1" firstAttribute="leading" secondItem="t7W-lr-J75" secondAttribute="trailing" constant="8" id="bcy-aR-4Ll"/>
                     <constraint firstItem="t7W-lr-J75" firstAttribute="centerY" secondItem="H3y-BZ-fAE" secondAttribute="centerY" id="fYb-Cd-8kZ"/>
                     <constraint firstItem="zbE-a1-iuY" firstAttribute="top" secondItem="H3y-BZ-fAE" secondAttribute="top" constant="8" id="lhT-Vj-zhe"/>
                     <constraint firstItem="JJI-JE-frg" firstAttribute="leading" secondItem="t7W-lr-J75" secondAttribute="trailing" constant="8" id="nkg-aq-AH0"/>
                     <constraint firstAttribute="trailing" secondItem="k8r-yI-LY2" secondAttribute="trailing" constant="8" id="od8-p0-tkU"/>
-                    <constraint firstItem="DLL-hZ-ebg" firstAttribute="leading" secondItem="t7W-lr-J75" secondAttribute="trailing" constant="8" id="sJI-Bl-4nP"/>
                     <constraint firstItem="JJI-JE-frg" firstAttribute="top" secondItem="zbE-a1-iuY" secondAttribute="bottom" constant="2" id="y87-Tk-KI3"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatar" destination="t7W-lr-J75" id="Rz5-pp-QHK"/>
-                <outlet property="commitButton" destination="DLL-hZ-ebg" id="ySf-qs-xmP"/>
+                <outlet property="commitButton" destination="9BZ-zF-Zc1" id="XDC-Qg-D3Q"/>
                 <outlet property="date" destination="k8r-yI-LY2" id="PTt-5d-gmI"/>
                 <outlet property="message" destination="JJI-JE-frg" id="a4R-7p-rHd"/>
                 <outlet property="name" destination="zbE-a1-iuY" id="kxP-aV-wK8"/>
