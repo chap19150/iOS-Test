@@ -16,8 +16,6 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Can we do nav bar stuff here?
-        //TODO: test if navigation bar properties set here persist into the next VC
         self.navigationController?.navigationBar.backgroundColor = UIColor.orange
         
         // Access the GitHub API and get the last 30 commits to the rails repo.
@@ -100,13 +98,14 @@ class ViewController: UITableViewController {
         // Get the right commit
         let commit = authors[indexPath.section].commits?[indexPath.row]
         
-        // Set the cell properties
-        cell.timeLabel.text = commit!.timestamp
+        // Set textView text, limit to 2 lines, and truncate with ellipsis if longer
+        // (It won't wrap to two lines, but the ellipsis is working.)
         cell.messageTextView.text = commit!.message
-        cell.authorLabel.text = commit!.author
-        // Limit textview to 2 lines, otherwise truncate with an ellipsis
         cell.messageTextView.textContainer.maximumNumberOfLines = 2
         cell.messageTextView.textContainer.lineBreakMode = .byTruncatingTail
+        
+        // Turn the GitHub timestamp into something more human-readable, and set the time and date labels.
+        (cell.timeLabel.text, cell.dateLabel.text) = humanReadableTimeAndDate(from: commit!.timestamp!)
         
         // Make the avatar image view circular
         cell.avatarView.layer.cornerRadius = cell.avatarView.frame.size.height / 2.0
@@ -139,6 +138,26 @@ class ViewController: UITableViewController {
         
     }
     
+    // Convert an ISO 8601 timestamp from GitHub into a human-readable time and date
+    func humanReadableTimeAndDate(from timestamp: String) -> (String?, String?) {
+
+        let formatter = DateFormatter()
+        
+        // Get the date from the string
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        guard let date = formatter.date(from: timestamp) else { return ("", "") }
+        
+        // Get two new strings from the date
+        // .. time
+        formatter.dateFormat = "h:mm a"
+        let timeString = formatter.string(from: date)
+        // ...date
+        formatter.dateFormat = "E M/d"
+        let dateString = formatter.string(from: date)
+        
+        return (timeString, dateString)
+        
+    }
     
     
     override func didReceiveMemoryWarning() {
