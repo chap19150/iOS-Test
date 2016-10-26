@@ -25,22 +25,43 @@ class ViewController: UITableViewController {
             
             // Populate the tableview with everything except the avatars
             self.authors = authors
-            self.tableView.reloadData()
-            
-            // Get each author's avatar and add it to the table as it comes in
-            let imageClient = ImageClient()
-            
-            for index in self.authors.indices {
-                imageClient.getImage(for: self.authors[index], completion: { (avatar) in
-                    
-                    self.authors[index].avatarImage = avatar
-                    self.tableView.reloadData()
-                    
-                })
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
+            
+            // Get the authors' avatars and add them to the tableview
+            self.getAvatars()
+
         }
     }
 
+    // Download every author's avatar, and update the tableview with the images as they come in
+    func getAvatars() {
+        
+        let imageClient = ImageClient()
+        
+        for index in self.authors.indices {
+            
+            imageClient.getImage(for: self.authors[index], completion: { (avatar) in
+                
+                self.authors[index].avatarImage = avatar
+                
+                // Reload
+                DispatchQueue.main.async {
+                    
+                    self.tableView.reloadData()
+                    
+                    // Can't seem to get this working, to reload only the relevant section instead of the whole table...
+                    // self.tableView.reloadSections(IndexSet(integer: index), with: .none)
+                    
+                }
+                
+            })
+        }
+    }
+    
+    // MARK: tableview methods
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         // Get the author this section represents
@@ -51,9 +72,11 @@ class ViewController: UITableViewController {
             print("Couldn't load nib")
             return UIView()
         }
-        // Set properties
+        headerView.layoutIfNeeded()
+        
+        // Set author label
         headerView.authorLabel.text = author.username
-        headerView.backgroundColor = UIColor.yellow
+        
         // Set the avatar image if it's come in already; if it hasn't yet, use the placeholder
         if let avatar = author.avatarImage {
             headerView.avatarView.image = avatar
@@ -66,7 +89,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 60
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,6 +104,12 @@ class ViewController: UITableViewController {
         cell.timeLabel.text = commit!.timestamp
         cell.messageTextView.text = commit!.message
         cell.authorLabel.text = commit!.author
+        // Limit textview to 2 lines, otherwise truncate with an ellipsis
+        cell.messageTextView.textContainer.maximumNumberOfLines = 2
+        cell.messageTextView.textContainer.lineBreakMode = .byTruncatingTail
+        
+        // Make the avatar image view circular
+        cell.avatarView.layer.cornerRadius = cell.avatarView.frame.size.height / 2.0
         // Set the avatar image if it's come in already; if it hasn't yet, use the placeholder
         if let avatar = authors[indexPath.section].avatarImage {
             cell.avatarView.image = avatar

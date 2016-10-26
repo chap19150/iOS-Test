@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HNh-Rv-i1a" id="U2j-NG-Q0g">
-                                    <frame key="frameInset" width="375" height="83"/>
+                                    <frame key="frameInset" width="375" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyr-BG-1nT">
@@ -28,8 +30,11 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="commitMessage" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gbl-Xq-I8h">
+                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="commitMessage" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gbl-Xq-I8h">
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" notEnabled="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="27" id="DFg-oD-zxg"/>
                                             </constraints>
@@ -43,17 +48,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMa-bS-CjS">
-                                            <frame key="frameInset" minX="329" minY="11" width="44" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMa-bS-CjS">
                                             <color key="backgroundColor" red="0.41790347459999999" green="1" blue="0.9467450181" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="rMa-bS-CjS" secondAttribute="height" multiplier="1:1" id="lRi-jN-sfL"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="rMa-bS-CjS" firstAttribute="centerY" secondItem="U2j-NG-Q0g" secondAttribute="centerY" id="5vc-TS-J1d"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Gbl-Xq-I8h" secondAttribute="trailing" constant="60" id="Boq-xm-iwV"/>
+                                        <constraint firstItem="rMa-bS-CjS" firstAttribute="height" secondItem="U2j-NG-Q0g" secondAttribute="height" multiplier="0.75" id="F3S-ST-JhL"/>
                                         <constraint firstItem="Gbl-Xq-I8h" firstAttribute="leading" secondItem="xyr-BG-1nT" secondAttribute="trailing" constant="14" id="MLu-Sx-tdu"/>
                                         <constraint firstItem="xyr-BG-1nT" firstAttribute="centerY" secondItem="U2j-NG-Q0g" secondAttribute="centerY" id="aTM-LA-4L4"/>
                                         <constraint firstItem="xyr-BG-1nT" firstAttribute="leading" secondItem="U2j-NG-Q0g" secondAttribute="leadingMargin" constant="7" id="lJa-aQ-CuQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rMa-bS-CjS" secondAttribute="trailing" constant="-6" id="nAp-d2-7BE"/>
                                         <constraint firstItem="Gbl-Xq-I8h" firstAttribute="centerY" secondItem="U2j-NG-Q0g" secondAttribute="centerY" id="veB-wt-Amk"/>
                                     </constraints>
                                 </tableViewCellContentView>

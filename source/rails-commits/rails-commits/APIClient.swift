@@ -52,7 +52,7 @@ class APIClient: NSObject {
                     // Create a Commit instance
                     let newCommit = Commit(URL: commitURL,
                                            author: username,
-                                           timestamp: timestamp,
+                                           timestamp: self.convertDate(string: timestamp), // timestamp,
                                            message: message)
                     
                     // If the author isn't in the Authors array yet, create an Author instance and add it
@@ -76,6 +76,9 @@ class APIClient: NSObject {
         }
     }
     
+    // MARK: helper functions
+    
+    // Get index of an author in a
     func indexOfAuthor(named username: String, in authors: [Author]) -> Int? {
         
         var index = 0
@@ -86,6 +89,18 @@ class APIClient: NSObject {
             index += 1
         }
         return nil
+    }
+    
+    // Convert date from GitHub's ISO 8601
+    func convertDate(string: String) -> String? {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        guard let date = formatter.date(from: string) else { return string }
+        formatter.dateFormat = "E, MMM d, yyyy" //TODO: CHANGE THIS to add time
+        let newString = formatter.string(from: date)
+        return newString
+        
     }
 
 }
