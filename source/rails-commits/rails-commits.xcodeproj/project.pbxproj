@@ -97,6 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F9BC3C81DC161B900AA370A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09DE91DB9380500A4F11E /* ViewController.swift */,
+				1FFD2CED1DBED2BB001978D4 /* WebViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1F9BC3C91DC161CE00AA370A /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09E181DB951F900A4F11E /* APIClient.swift */,
+				1FFD2CEB1DBEB209001978D4 /* ImageClient.swift */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
 		1FC09DDB1DB9380300A4F11E = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				1FC09DE71DB9380500A4F11E /* AppDelegate.swift */,
-				1FC09DE91DB9380500A4F11E /* ViewController.swift */,
-				1FFD2CED1DBED2BB001978D4 /* WebViewController.swift */,
-				1FC09E181DB951F900A4F11E /* APIClient.swift */,
-				1FFD2CEB1DBEB209001978D4 /* ImageClient.swift */,
+				1F9BC3C81DC161B900AA370A /* View Controllers */,
+				1F9BC3C91DC161CE00AA370A /* Clients */,
 				1FFD2CE11DBAB6B6001978D4 /* Models */,
 				1FFD2CEA1DBDA169001978D4 /* Storyboards and Views */,
 				1FC09DF11DB9380600A4F11E /* Assets.xcassets */,

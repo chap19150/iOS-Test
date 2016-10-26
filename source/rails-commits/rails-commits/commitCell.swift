@@ -11,9 +11,9 @@ import UIKit
 class commitCell: UITableViewCell {
 
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

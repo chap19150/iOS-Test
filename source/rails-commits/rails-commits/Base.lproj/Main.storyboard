@@ -43,39 +43,36 @@
                                                 <constraint firstItem="xyr-BG-1nT" firstAttribute="width" secondItem="NXp-QM-Eo2" secondAttribute="width" id="cK5-V5-L5M"/>
                                             </constraints>
                                         </stackView>
-                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="commitMessage" translatesAutoresizingMaskIntoConstraints="NO" id="Gbl-Xq-I8h">
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <accessibility key="accessibilityConfiguration">
-                                                <accessibilityTraits key="traits" notEnabled="YES"/>
-                                            </accessibility>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMa-bS-CjS">
                                             <color key="backgroundColor" red="0.41790347459999999" green="1" blue="0.9467450181" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="rMa-bS-CjS" secondAttribute="height" multiplier="1:1" id="lRi-jN-sfL"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-mp-6uw">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="NXp-QM-Eo2" firstAttribute="leading" secondItem="U2j-NG-Q0g" secondAttribute="leadingMargin" id="4s9-eg-6LE"/>
                                         <constraint firstItem="rMa-bS-CjS" firstAttribute="centerY" secondItem="U2j-NG-Q0g" secondAttribute="centerY" id="5vc-TS-J1d"/>
+                                        <constraint firstItem="dvC-mp-6uw" firstAttribute="leading" secondItem="NXp-QM-Eo2" secondAttribute="trailing" constant="20" id="BRQ-f4-zdi"/>
+                                        <constraint firstItem="dvC-mp-6uw" firstAttribute="height" secondItem="U2j-NG-Q0g" secondAttribute="height" id="EIA-5N-GMg"/>
                                         <constraint firstItem="rMa-bS-CjS" firstAttribute="height" secondItem="U2j-NG-Q0g" secondAttribute="height" multiplier="0.75" id="F3S-ST-JhL"/>
+                                        <constraint firstItem="rMa-bS-CjS" firstAttribute="leading" secondItem="dvC-mp-6uw" secondAttribute="trailing" constant="20" id="JOB-Df-29c"/>
+                                        <constraint firstItem="dvC-mp-6uw" firstAttribute="centerY" secondItem="U2j-NG-Q0g" secondAttribute="centerY" id="MSo-Mq-0aM"/>
                                         <constraint firstItem="NXp-QM-Eo2" firstAttribute="height" secondItem="U2j-NG-Q0g" secondAttribute="height" id="ODv-c9-hlf"/>
-                                        <constraint firstItem="Gbl-Xq-I8h" firstAttribute="leading" secondItem="NXp-QM-Eo2" secondAttribute="trailing" constant="20" id="Zhk-b2-EzJ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="rMa-bS-CjS" secondAttribute="trailing" id="nAp-d2-7BE"/>
                                         <constraint firstItem="NXp-QM-Eo2" firstAttribute="centerY" secondItem="U2j-NG-Q0g" secondAttribute="centerY" id="tOd-xF-hpu"/>
-                                        <constraint firstItem="Gbl-Xq-I8h" firstAttribute="centerY" secondItem="U2j-NG-Q0g" secondAttribute="centerY" id="veB-wt-Amk"/>
                                         <constraint firstItem="NXp-QM-Eo2" firstAttribute="width" secondItem="U2j-NG-Q0g" secondAttribute="width" multiplier="0.2" id="yDx-2Y-caQ"/>
-                                        <constraint firstItem="Gbl-Xq-I8h" firstAttribute="height" secondItem="U2j-NG-Q0g" secondAttribute="height" id="yqr-AR-reV"/>
-                                        <constraint firstItem="rMa-bS-CjS" firstAttribute="leading" secondItem="Gbl-Xq-I8h" secondAttribute="trailing" constant="20" id="zEY-Ld-Pjw"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="avatarView" destination="rMa-bS-CjS" id="Qhl-55-3EL"/>
                                     <outlet property="dateLabel" destination="o7A-Mp-a5j" id="8ky-uT-D8S"/>
-                                    <outlet property="messageTextView" destination="Gbl-Xq-I8h" id="db2-Jt-Wf1"/>
+                                    <outlet property="messageLabel" destination="dvC-mp-6uw" id="TFl-Ow-DhM"/>
                                     <outlet property="timeLabel" destination="xyr-BG-1nT" id="JCh-IY-nc8"/>
                                     <segue destination="v58-Gc-TLa" kind="show" id="zAh-ki-5Qa"/>
                                 </connections>
@@ -92,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwp-xO-I54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-471" y="72"/>
+            <point key="canvasLocation" x="-471.19999999999999" y="71.514242878560722"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="KpX-Ni-7PP">

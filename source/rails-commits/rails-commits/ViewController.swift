@@ -33,29 +33,45 @@ class ViewController: UITableViewController {
         }
     }
 
+    // MARK: helper methods
+    
     // Download every author's avatar, and update the tableview with the images as they come in
     func getAvatars() {
         
         let imageClient = ImageClient()
-        
         for index in self.authors.indices {
-            
             imageClient.getImage(for: self.authors[index], completion: { (avatar) in
-                
                 self.authors[index].avatarImage = avatar
-                
                 // Reload
                 DispatchQueue.main.async {
-                    
                     self.tableView.reloadData()
-                    
                     // Can't seem to get this working, to reload only the relevant section instead of the whole table...
                     // self.tableView.reloadSections(IndexSet(integer: index), with: .none)
                     
                 }
-                
             })
         }
+    }
+    
+    // Convert an ISO 8601 timestamp from GitHub into a human-readable time and date
+    func humanReadableTimeAndDate(from timestamp: String) -> (String?, String?) {
+        
+        let formatter = DateFormatter()
+        
+        // Get the date from the string
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        guard let date = formatter.date(from: timestamp) else { return ("", "") }
+        
+        // Get two new strings from the date
+        // .. time
+        formatter.dateFormat = "h:mm a"
+        let timeString = formatter.string(from: date)
+        // ...date
+        formatter.dateFormat = "E M/d"
+        let dateString = formatter.string(from: date)
+        
+        return (timeString, dateString)
+        
     }
     
     // MARK: tableview methods
@@ -98,11 +114,8 @@ class ViewController: UITableViewController {
         // Get the right commit
         let commit = authors[indexPath.section].commits?[indexPath.row]
         
-        // Set textView text, limit to 2 lines, and truncate with ellipsis if longer
-        // (It won't wrap to two lines, but the ellipsis is working.)
-        cell.messageTextView.text = commit!.message
-        cell.messageTextView.textContainer.maximumNumberOfLines = 2
-        cell.messageTextView.textContainer.lineBreakMode = .byTruncatingTail
+        // Set commit message text
+        cell.messageLabel.text = commit!.message
         
         // Turn the GitHub timestamp into something more human-readable, and set the time and date labels.
         (cell.timeLabel.text, cell.dateLabel.text) = humanReadableTimeAndDate(from: commit!.timestamp!)
@@ -127,6 +140,9 @@ class ViewController: UITableViewController {
         return self.authors[section].commits!.count
     }
     
+    
+    // MARK: Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Pass the selected commit's URL to the webview
@@ -135,27 +151,6 @@ class ViewController: UITableViewController {
         if let destVC: WebViewController = segue.destination as? WebViewController {
             destVC.urlString = url
         }
-        
-    }
-    
-    // Convert an ISO 8601 timestamp from GitHub into a human-readable time and date
-    func humanReadableTimeAndDate(from timestamp: String) -> (String?, String?) {
-
-        let formatter = DateFormatter()
-        
-        // Get the date from the string
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-        guard let date = formatter.date(from: timestamp) else { return ("", "") }
-        
-        // Get two new strings from the date
-        // .. time
-        formatter.dateFormat = "h:mm a"
-        let timeString = formatter.string(from: date)
-        // ...date
-        formatter.dateFormat = "E M/d"
-        let dateString = formatter.string(from: date)
-        
-        return (timeString, dateString)
         
     }
     
