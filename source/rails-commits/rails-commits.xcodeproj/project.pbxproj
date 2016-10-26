@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FC09DE81DB9380500A4F11E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC09DE71DB9380500A4F11E /* AppDelegate.swift */; };
+		1FC09DEA1DB9380500A4F11E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC09DE91DB9380500A4F11E /* ViewController.swift */; };
+		1FC09DED1DB9380600A4F11E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC09DEB1DB9380600A4F11E /* Main.storyboard */; };
+		1FC09DF01DB9380600A4F11E /* rails_commits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FC09DEE1DB9380600A4F11E /* rails_commits.xcdatamodeld */; };
+		1FC09DF21DB9380600A4F11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC09DF11DB9380600A4F11E /* Assets.xcassets */; };
+		1FC09DF51DB9380600A4F11E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC09DF31DB9380600A4F11E /* LaunchScreen.storyboard */; };
+		1FC09E001DB9380600A4F11E /* rails_commitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC09DFF1DB9380600A4F11E /* rails_commitsTests.swift */; };
+		1FC09E0B1DB9380600A4F11E /* rails_commitsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC09E0A1DB9380600A4F11E /* rails_commitsUITests.swift */; };
+		1FC09E191DB951FA00A4F11E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC09E181DB951F900A4F11E /* APIClient.swift */; };
+		1FFD2CDE1DBAB668001978D4 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CDD1DBAB668001978D4 /* Author.swift */; };
+		1FFD2CE01DBAB69F001978D4 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CDF1DBAB69F001978D4 /* Commit.swift */; };
+		1FFD2CE51DBC3DF8001978D4 /* commitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CE41DBC3DF8001978D4 /* commitCell.swift */; };
+		1FFD2CE71DBDA130001978D4 /* authorHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD2CE61DBDA130001978D4 /* authorHeaderView.xib */; };
+		1FFD2CE91DBDA156001978D4 /* authorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CE81DBDA156001978D4 /* authorHeaderView.swift */; };
+		1FFD2CEC1DBEB209001978D4 /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CEB1DBEB209001978D4 /* ImageClient.swift */; };
+		1FFD2CEE1DBED2BB001978D4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD2CED1DBED2BB001978D4 /* WebViewController.swift */; };
+		2C0FF6E13A68836945177374 /* Pods_rails_commits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905EB2A0878524DC3237C847 /* Pods_rails_commits.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FC09DFC1DB9380600A4F11E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FC09DDC1DB9380300A4F11E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FC09DE31DB9380400A4F11E;
+			remoteInfo = "rails-commits";
+		};
+		1FC09E071DB9380600A4F11E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FC09DDC1DB9380300A4F11E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FC09DE31DB9380400A4F11E;
+			remoteInfo = "rails-commits";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FE0FF8CC406F9ACB46E1163 /* Pods-rails-commits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rails-commits.release.xcconfig"; path = "Pods/Target Support Files/Pods-rails-commits/Pods-rails-commits.release.xcconfig"; sourceTree = "<group>"; };
+		1FC09DE41DB9380400A4F11E /* rails-commits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rails-commits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC09DE71DB9380500A4F11E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FC09DE91DB9380500A4F11E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FC09DEC1DB9380600A4F11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FC09DEF1DB9380600A4F11E /* rails_commits.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = rails_commits.xcdatamodel; sourceTree = "<group>"; };
+		1FC09DF11DB9380600A4F11E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FC09DF41DB9380600A4F11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FC09DF61DB9380600A4F11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC09DFB1DB9380600A4F11E /* rails-commitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rails-commitsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC09DFF1DB9380600A4F11E /* rails_commitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rails_commitsTests.swift; sourceTree = "<group>"; };
+		1FC09E011DB9380600A4F11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC09E061DB9380600A4F11E /* rails-commitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rails-commitsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC09E0A1DB9380600A4F11E /* rails_commitsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rails_commitsUITests.swift; sourceTree = "<group>"; };
+		1FC09E0C1DB9380600A4F11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC09E181DB951F900A4F11E /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		1FFD2CDD1DBAB668001978D4 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		1FFD2CDF1DBAB69F001978D4 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		1FFD2CE41DBC3DF8001978D4 /* commitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commitCell.swift; sourceTree = "<group>"; };
+		1FFD2CE61DBDA130001978D4 /* authorHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = authorHeaderView.xib; sourceTree = "<group>"; };
+		1FFD2CE81DBDA156001978D4 /* authorHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authorHeaderView.swift; sourceTree = "<group>"; };
+		1FFD2CEB1DBEB209001978D4 /* ImageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClient.swift; sourceTree = "<group>"; };
+		1FFD2CED1DBED2BB001978D4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		6D04A51CDC9782AAF3DB1399 /* Pods-rails-commits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rails-commits.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rails-commits/Pods-rails-commits.debug.xcconfig"; sourceTree = "<group>"; };
+		905EB2A0878524DC3237C847 /* Pods_rails_commits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rails_commits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FC09DE11DB9380400A4F11E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0FF6E13A68836945177374 /* Pods_rails_commits.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC09DF81DB9380600A4F11E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC09E031DB9380600A4F11E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F9BC3C81DC161B900AA370A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09DE91DB9380500A4F11E /* ViewController.swift */,
+				1FFD2CED1DBED2BB001978D4 /* WebViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1F9BC3C91DC161CE00AA370A /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09E181DB951F900A4F11E /* APIClient.swift */,
+				1FFD2CEB1DBEB209001978D4 /* ImageClient.swift */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		1FC09DDB1DB9380300A4F11E = {
+			isa = PBXGroup;
+			children = (
+				1FC09DE61DB9380500A4F11E /* rails-commits */,
+				1FC09DFE1DB9380600A4F11E /* rails-commitsTests */,
+				1FC09E091DB9380600A4F11E /* rails-commitsUITests */,
+				1FC09DE51DB9380400A4F11E /* Products */,
+				6D3017385C25735F6CF2E8C4 /* Pods */,
+				7F1638EC786534D77ADE96D8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FC09DE51DB9380400A4F11E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09DE41DB9380400A4F11E /* rails-commits.app */,
+				1FC09DFB1DB9380600A4F11E /* rails-commitsTests.xctest */,
+				1FC09E061DB9380600A4F11E /* rails-commitsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FC09DE61DB9380500A4F11E /* rails-commits */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09DE71DB9380500A4F11E /* AppDelegate.swift */,
+				1F9BC3C81DC161B900AA370A /* View Controllers */,
+				1F9BC3C91DC161CE00AA370A /* Clients */,
+				1FFD2CE11DBAB6B6001978D4 /* Models */,
+				1FFD2CEA1DBDA169001978D4 /* Storyboards and Views */,
+				1FC09DF11DB9380600A4F11E /* Assets.xcassets */,
+				1FC09DF61DB9380600A4F11E /* Info.plist */,
+				1FC09DEE1DB9380600A4F11E /* rails_commits.xcdatamodeld */,
+			);
+			path = "rails-commits";
+			sourceTree = "<group>";
+		};
+		1FC09DFE1DB9380600A4F11E /* rails-commitsTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09DFF1DB9380600A4F11E /* rails_commitsTests.swift */,
+				1FC09E011DB9380600A4F11E /* Info.plist */,
+			);
+			path = "rails-commitsTests";
+			sourceTree = "<group>";
+		};
+		1FC09E091DB9380600A4F11E /* rails-commitsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09E0A1DB9380600A4F11E /* rails_commitsUITests.swift */,
+				1FC09E0C1DB9380600A4F11E /* Info.plist */,
+			);
+			path = "rails-commitsUITests";
+			sourceTree = "<group>";
+		};
+		1FFD2CE11DBAB6B6001978D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1FFD2CDD1DBAB668001978D4 /* Author.swift */,
+				1FFD2CDF1DBAB69F001978D4 /* Commit.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1FFD2CEA1DBDA169001978D4 /* Storyboards and Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FC09DEB1DB9380600A4F11E /* Main.storyboard */,
+				1FC09DF31DB9380600A4F11E /* LaunchScreen.storyboard */,
+				1FFD2CE61DBDA130001978D4 /* authorHeaderView.xib */,
+				1FFD2CE81DBDA156001978D4 /* authorHeaderView.swift */,
+				1FFD2CE41DBC3DF8001978D4 /* commitCell.swift */,
+			);
+			name = "Storyboards and Views";
+			sourceTree = "<group>";
+		};
+		6D3017385C25735F6CF2E8C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D04A51CDC9782AAF3DB1399 /* Pods-rails-commits.debug.xcconfig */,
+				0FE0FF8CC406F9ACB46E1163 /* Pods-rails-commits.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F1638EC786534D77ADE96D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				905EB2A0878524DC3237C847 /* Pods_rails_commits.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FC09DE31DB9380400A4F11E /* rails-commits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC09E0F1DB9380700A4F11E /* Build configuration list for PBXNativeTarget "rails-commits" */;
+			buildPhases = (
+				66D62D4199F4D26F89777008 /* [CP] Check Pods Manifest.lock */,
+				1FC09DE01DB9380400A4F11E /* Sources */,
+				1FC09DE11DB9380400A4F11E /* Frameworks */,
+				1FC09DE21DB9380400A4F11E /* Resources */,
+				27EF916AC83CABF084AC5F8B /* [CP] Embed Pods Frameworks */,
+				5BAFFC487992D094B2B708DA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "rails-commits";
+			productName = "rails-commits";
+			productReference = 1FC09DE41DB9380400A4F11E /* rails-commits.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FC09DFA1DB9380600A4F11E /* rails-commitsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC09E121DB9380700A4F11E /* Build configuration list for PBXNativeTarget "rails-commitsTests" */;
+			buildPhases = (
+				1FC09DF71DB9380600A4F11E /* Sources */,
+				1FC09DF81DB9380600A4F11E /* Frameworks */,
+				1FC09DF91DB9380600A4F11E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FC09DFD1DB9380600A4F11E /* PBXTargetDependency */,
+			);
+			name = "rails-commitsTests";
+			productName = "rails-commitsTests";
+			productReference = 1FC09DFB1DB9380600A4F11E /* rails-commitsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FC09E051DB9380600A4F11E /* rails-commitsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC09E151DB9380700A4F11E /* Build configuration list for PBXNativeTarget "rails-commitsUITests" */;
+			buildPhases = (
+				1FC09E021DB9380600A4F11E /* Sources */,
+				1FC09E031DB9380600A4F11E /* Frameworks */,
+				1FC09E041DB9380600A4F11E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FC09E081DB9380600A4F11E /* PBXTargetDependency */,
+			);
+			name = "rails-commitsUITests";
+			productName = "rails-commitsUITests";
+			productReference = 1FC09E061DB9380600A4F11E /* rails-commitsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FC09DDC1DB9380300A4F11E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Jeff Spingeld";
+				TargetAttributes = {
+					1FC09DE31DB9380400A4F11E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B2QZKSE2Y4;
+						ProvisioningStyle = Automatic;
+					};
+					1FC09DFA1DB9380600A4F11E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B2QZKSE2Y4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1FC09DE31DB9380400A4F11E;
+					};
+					1FC09E051DB9380600A4F11E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B2QZKSE2Y4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1FC09DE31DB9380400A4F11E;
+					};
+				};
+			};
+			buildConfigurationList = 1FC09DDF1DB9380300A4F11E /* Build configuration list for PBXProject "rails-commits" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FC09DDB1DB9380300A4F11E;
+			productRefGroup = 1FC09DE51DB9380400A4F11E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FC09DE31DB9380400A4F11E /* rails-commits */,
+				1FC09DFA1DB9380600A4F11E /* rails-commitsTests */,
+				1FC09E051DB9380600A4F11E /* rails-commitsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FC09DE21DB9380400A4F11E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFD2CE71DBDA130001978D4 /* authorHeaderView.xib in Resources */,
+				1FC09DF51DB9380600A4F11E /* LaunchScreen.storyboard in Resources */,
+				1FC09DF21DB9380600A4F11E /* Assets.xcassets in Resources */,
+				1FC09DED1DB9380600A4F11E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC09DF91DB9380600A4F11E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC09E041DB9380600A4F11E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27EF916AC83CABF084AC5F8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rails-commits/Pods-rails-commits-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BAFFC487992D094B2B708DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rails-commits/Pods-rails-commits-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66D62D4199F4D26F89777008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FC09DE01DB9380400A4F11E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFD2CE91DBDA156001978D4 /* authorHeaderView.swift in Sources */,
+				1FFD2CE01DBAB69F001978D4 /* Commit.swift in Sources */,
+				1FFD2CE51DBC3DF8001978D4 /* commitCell.swift in Sources */,
+				1FFD2CEE1DBED2BB001978D4 /* WebViewController.swift in Sources */,
+				1FC09DEA1DB9380500A4F11E /* ViewController.swift in Sources */,
+				1FC09DF01DB9380600A4F11E /* rails_commits.xcdatamodeld in Sources */,
+				1FC09DE81DB9380500A4F11E /* AppDelegate.swift in Sources */,
+				1FFD2CEC1DBEB209001978D4 /* ImageClient.swift in Sources */,
+				1FC09E191DB951FA00A4F11E /* APIClient.swift in Sources */,
+				1FFD2CDE1DBAB668001978D4 /* Author.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC09DF71DB9380600A4F11E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC09E001DB9380600A4F11E /* rails_commitsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC09E021DB9380600A4F11E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC09E0B1DB9380600A4F11E /* rails_commitsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FC09DFD1DB9380600A4F11E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FC09DE31DB9380400A4F11E /* rails-commits */;
+			targetProxy = 1FC09DFC1DB9380600A4F11E /* PBXContainerItemProxy */;
+		};
+		1FC09E081DB9380600A4F11E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FC09DE31DB9380400A4F11E /* rails-commits */;
+			targetProxy = 1FC09E071DB9380600A4F11E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FC09DEB1DB9380600A4F11E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FC09DEC1DB9380600A4F11E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FC09DF31DB9380600A4F11E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FC09DF41DB9380600A4F11E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FC09E0D1DB9380700A4F11E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FC09E0E1DB9380700A4F11E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FC09E101DB9380700A4F11E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D04A51CDC9782AAF3DB1399 /* Pods-rails-commits.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B2QZKSE2Y4;
+				INFOPLIST_FILE = "rails-commits/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeffDS.rails-commits";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1FC09E111DB9380700A4F11E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FE0FF8CC406F9ACB46E1163 /* Pods-rails-commits.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B2QZKSE2Y4;
+				INFOPLIST_FILE = "rails-commits/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeffDS.rails-commits";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1FC09E131DB9380700A4F11E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = B2QZKSE2Y4;
+				INFOPLIST_FILE = "rails-commitsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeffDS.rails-commitsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rails-commits.app/rails-commits";
+			};
+			name = Debug;
+		};
+		1FC09E141DB9380700A4F11E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = B2QZKSE2Y4;
+				INFOPLIST_FILE = "rails-commitsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeffDS.rails-commitsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rails-commits.app/rails-commits";
+			};
+			name = Release;
+		};
+		1FC09E161DB9380700A4F11E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = B2QZKSE2Y4;
+				INFOPLIST_FILE = "rails-commitsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeffDS.rails-commitsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "rails-commits";
+			};
+			name = Debug;
+		};
+		1FC09E171DB9380700A4F11E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = B2QZKSE2Y4;
+				INFOPLIST_FILE = "rails-commitsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeffDS.rails-commitsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "rails-commits";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FC09DDF1DB9380300A4F11E /* Build configuration list for PBXProject "rails-commits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC09E0D1DB9380700A4F11E /* Debug */,
+				1FC09E0E1DB9380700A4F11E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FC09E0F1DB9380700A4F11E /* Build configuration list for PBXNativeTarget "rails-commits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC09E101DB9380700A4F11E /* Debug */,
+				1FC09E111DB9380700A4F11E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FC09E121DB9380700A4F11E /* Build configuration list for PBXNativeTarget "rails-commitsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC09E131DB9380700A4F11E /* Debug */,
+				1FC09E141DB9380700A4F11E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FC09E151DB9380700A4F11E /* Build configuration list for PBXNativeTarget "rails-commitsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC09E161DB9380700A4F11E /* Debug */,
+				1FC09E171DB9380700A4F11E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1FC09DEE1DB9380600A4F11E /* rails_commits.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FC09DEF1DB9380600A4F11E /* rails_commits.xcdatamodel */,
+			);
+			currentVersion = 1FC09DEF1DB9380600A4F11E /* rails_commits.xcdatamodel */;
+			path = rails_commits.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1FC09DDC1DB9380300A4F11E /* Project object */;
+}
