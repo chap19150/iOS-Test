@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NqX-Ge-qZg" id="H3y-BZ-fAE">
-                <frame key="frameInset" width="320" height="100"/>
+                <frame key="frameInset" width="320" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="haileysholty21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-a1-iuY">
@@ -56,7 +56,7 @@
                 <constraints>
                     <constraint firstItem="t7W-lr-J75" firstAttribute="leading" secondItem="H3y-BZ-fAE" secondAttribute="leading" constant="15" id="3XC-fh-8aJ"/>
                     <constraint firstAttribute="bottom" secondItem="9BZ-zF-Zc1" secondAttribute="bottom" constant="8" id="A8w-aL-NJq"/>
-                    <constraint firstAttribute="trailing" secondItem="JJI-JE-frg" secondAttribute="trailing" constant="8" id="Ia4-P0-xw3"/>
+                    <constraint firstAttribute="trailing" secondItem="JJI-JE-frg" secondAttribute="trailing" constant="15" id="Ia4-P0-xw3"/>
                     <constraint firstItem="k8r-yI-LY2" firstAttribute="leading" secondItem="zbE-a1-iuY" secondAttribute="trailing" constant="8" id="K7M-Ou-6VW"/>
                     <constraint firstItem="zbE-a1-iuY" firstAttribute="leading" secondItem="t7W-lr-J75" secondAttribute="trailing" constant="8" id="Xqp-EB-jDO"/>
                     <constraint firstItem="k8r-yI-LY2" firstAttribute="top" secondItem="H3y-BZ-fAE" secondAttribute="top" constant="12" id="Y5c-PA-eZ6"/>
