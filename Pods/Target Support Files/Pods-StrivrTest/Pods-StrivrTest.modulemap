@@ -1,6 +1,0 @@
-framework module Pods_StrivrTest {
-  umbrella header "Pods-StrivrTest-umbrella.h"
-
-  export *
-  module * { export * }
-}
