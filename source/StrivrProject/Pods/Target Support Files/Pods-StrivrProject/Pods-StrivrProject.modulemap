@@ -1,0 +1,6 @@
+framework module Pods_StrivrProject {
+  umbrella header "Pods-StrivrProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
