@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F0BC62C4D6AA1DF23A863DA864DDF3B3F1AAF402",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F0BC62C4D6AA1DF23A863DA864DDF3B3F1AAF402" : 9223372036854775807,
+    "81CF173C40A35A51BD6CF3F4580804424013B012" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "28A70CB9-CFCE-49FA-98C7-7F698B9B91F8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F0BC62C4D6AA1DF23A863DA864DDF3B3F1AAF402" : "iOS-Test\/",
+    "81CF173C40A35A51BD6CF3F4580804424013B012" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "StrivrProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "source\/StrivrProject\/StrivrProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dnadri\/Swift-Projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "81CF173C40A35A51BD6CF3F4580804424013B012"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dnadri\/iOS-Test.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F0BC62C4D6AA1DF23A863DA864DDF3B3F1AAF402"
+    }
+  ]
+}
